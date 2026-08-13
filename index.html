@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HG Intel — Regulatory & best-practice intelligence for healthcare</title>
+<meta name="description" content="HG Intel consolidates healthcare regulation, legislation and best practice into one place — monitored continuously, reviewed by human clinical-governance experts, filtered to you. Launching 2027." />
+<meta property="og:title" content="HG Intel — launching 2027" />
+<meta property="og:description" content="One source of truth for healthcare regulation, legislation and best practice. Human-reviewed. Australian-built and hosted." />
+<meta property="og:type" content="website" />
+<meta name="theme-color" content="#00B4FF" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%B7%3C/text%3E%3C/svg%3E" />
+<style>
+  :root{
+    --ink:#0A1F3C;          /* deep navy ink for text */
+    --ink-soft:#41546F;     /* secondary text */
+    --ink-faint:#7C8BA1;    /* captions */
+    --cyber:#00B4FF;        /* bright cyber (gradients/focus) */
+    --cyber-mid:#0577C7;    /* accent text / links */
+    --cyber-deep:#0A4D8C;   /* small text on tint */
+    --violet:#8b5cf6;
+    --line:#E4ECF5;
+    /* thread coding */
+    --t-reg:#00B4FF; --t-clin:#10b981; --t-evid:#8b5cf6; --t-priv:#ec4899; --t-fund:#f97316;
+    --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  body{
+    font-family:var(--sans);
+    color:var(--ink);
+    background:#FFFFFF;
+    line-height:1.55;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    overflow-x:hidden;
+  }
+
+  /* ---- hero glow + streams background ---- */
+  .bg{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+  .glow{position:absolute;border-radius:50%;filter:blur(60px);opacity:.5}
+  .glow.a{width:640px;height:640px;top:-220px;right:-160px;
+    background:radial-gradient(circle at 30% 30%,var(--cyber),transparent 62%)}
+  .glow.b{width:560px;height:560px;top:-120px;right:120px;
+    background:radial-gradient(circle at 50% 50%,var(--cyber-mid),transparent 60%);opacity:.35}
+  .glow.c{width:520px;height:520px;bottom:-220px;left:-140px;
+    background:radial-gradient(circle at 50% 50%,var(--violet),transparent 60%);opacity:.30}
+  .streams{position:absolute;inset:0;width:100%;height:100%}
+  .streams path{fill:none;stroke-width:2;opacity:.32;
+    stroke-dasharray:10 14;animation:flow 9s linear infinite}
+  /* soft readability scrim so streams sit behind the copy */
+  .bg::after{content:"";position:absolute;inset:0;
+    background:radial-gradient(60% 55% at 34% 46%,rgba(255,255,255,.82),rgba(255,255,255,0) 70%)}
+  @keyframes flow{to{stroke-dashoffset:-480}}
+  @media (prefers-reduced-motion:reduce){.streams path{animation:none}}
+
+  /* ---- layout ---- */
+  header,main,footer{position:relative;z-index:1;width:100%}
+  .wrap{max-width:920px;margin:0 auto;padding:0 28px}
+
+  header{padding:30px 0 10px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:700;
+    letter-spacing:-.01em;font-size:20px;color:var(--ink)}
+  .brand .dot{width:13px;height:13px;border-radius:4px;
+    background:linear-gradient(135deg,var(--cyber),var(--cyber-mid));
+    box-shadow:0 0 0 4px rgba(0,180,255,.14)}
+  .brand span{color:var(--cyber-mid)}
+
+  main{flex:1;display:flex;align-items:center;padding:36px 0 20px}
+  .kicker{display:inline-flex;align-items:center;gap:8px;
+    font-size:12.5px;font-weight:700;letter-spacing:.10em;text-transform:uppercase;
+    color:#fff;padding:7px 15px;border-radius:999px;
+    background:linear-gradient(90deg,#7dd3fc,var(--cyber));
+    box-shadow:0 6px 18px -6px rgba(0,180,255,.6)}
+  .kicker::before{content:"";width:7px;height:7px;border-radius:50%;
+    background:#fff;box-shadow:0 0 0 3px rgba(255,255,255,.35)}
+
+  h1{font-size:clamp(34px,6vw,58px);line-height:1.06;letter-spacing:-.025em;
+    font-weight:800;margin:22px 0 0;max-width:16ch}
+  h1 em{font-style:italic;font-weight:800;
+    background:linear-gradient(120deg,var(--cyber),var(--cyber-mid) 55%,var(--violet));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+
+  .lead{font-size:clamp(16.5px,2.3vw,20px);color:var(--ink-soft);
+    margin-top:22px;max-width:56ch}
+
+  /* thread chips */
+  .threads{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}
+  .chip{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;
+    color:var(--ink);background:#fff;border:1px solid var(--line);
+    padding:8px 14px;border-radius:999px;box-shadow:0 1px 2px rgba(10,31,60,.04)}
+  .chip i{width:9px;height:9px;border-radius:50%;display:inline-block}
+
+  /* value points */
+  .points{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:14px;margin-top:34px}
+  .point{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 18px;
+    box-shadow:0 10px 30px -22px rgba(10,31,60,.35)}
+  .point h3{font-size:15px;font-weight:700;letter-spacing:-.01em;display:flex;align-items:center;gap:9px}
+  .point h3 .m{width:26px;height:26px;border-radius:8px;flex:none;display:grid;place-items:center;
+    background:linear-gradient(135deg,#EAF9FF,#C9EFFF);color:var(--cyber-deep);font-size:14px}
+  .point p{font-size:13.6px;color:var(--ink-soft);margin-top:9px}
+
+  /* cta */
+  .cta{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:34px}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:15px;
+    padding:13px 24px;border-radius:999px;text-decoration:none;
+    color:#fff;background:linear-gradient(90deg,var(--cyber-mid),var(--cyber));
+    box-shadow:0 12px 26px -10px rgba(5,119,199,.7);transition:transform .15s ease,box-shadow .15s ease}
+  .btn:hover{transform:translateY(-1px);box-shadow:0 16px 30px -10px rgba(5,119,199,.75)}
+  .cta .note{font-size:13.5px;color:var(--ink-faint)}
+
+  footer{padding:30px 0 34px;border-top:1px solid var(--line);margin-top:44px}
+  .foot{display:flex;flex-wrap:wrap;gap:14px 26px;align-items:center;justify-content:space-between}
+  .foot small{color:var(--ink-faint);font-size:12.5px;line-height:1.5}
+  .foot a{color:var(--cyber-mid);text-decoration:none}
+  .foot a:hover{text-decoration:underline}
+  .disclaimer{max-width:60ch}
+
+  @media (max-width:560px){
+    header{padding:22px 0 6px}
+    .cta{gap:12px}
+    .btn{width:100%;justify-content:center}
+  }
+</style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <div class="glow a"></div><div class="glow b"></div><div class="glow c"></div>
+    <svg class="streams" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+      <path d="M-40,150 C260,60 520,300 820,180 1080,80 1180,240 1300,160" stroke="#00B4FF"/>
+      <path d="M-40,300 C240,220 560,430 860,330 1120,250 1200,400 1300,320" stroke="#8b5cf6"/>
+      <path d="M-40,470 C300,400 540,560 900,470 1120,420 1220,540 1300,470" stroke="#0ea5e9"/>
+      <path d="M-40,620 C260,560 620,700 900,600 1120,540 1240,660 1300,600" stroke="#10b981"/>
+    </svg>
+  </div>
+
+  <header>
+    <div class="wrap">
+      <div class="brand"><span class="dot"></span>HG&nbsp;<span>Intel</span></div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <span class="kicker">Launching 2027</span>
+
+      <h1>Healthcare's rules keep changing. <em>Staying current shouldn't be this hard.</em></h1>
+
+      <p class="lead">
+        Regulation, legislation and best practice sit across dozens of sources, all moving at once —
+        aged care's biggest reset in 25 years, upcoming renewed NSQHS Standards, and an evidence base
+        that never stops. <strong>HG Intel brings it into one place.</strong>
+      </p>
+
+      <div class="threads" role="list">
+        <span class="chip" role="listitem"><i style="background:var(--t-reg)"></i>Regulatory</span>
+        <span class="chip" role="listitem"><i style="background:var(--t-clin)"></i>Clinical</span>
+        <span class="chip" role="listitem"><i style="background:var(--t-evid)"></i>Best practice</span>
+        <span class="chip" role="listitem"><i style="background:var(--t-priv)"></i>Privacy</span>
+        <span class="chip" role="listitem"><i style="background:var(--t-fund)"></i>Funding</span>
+      </div>
+
+      <div class="points">
+        <div class="point">
+          <h3><span class="m">◎</span>One source of truth</h3>
+          <p>Regulators and the evidence base monitored continuously, filtered to your sector and topics, with alerts when something relevant moves.</p>
+        </div>
+        <div class="point">
+          <h3><span class="m">✓</span>Human-reviewed</h3>
+          <p>Every update is checked by clinical-governance experts before it reaches you. AI does the scanning; qualified people do the judging.</p>
+        </div>
+        <div class="point">
+          <h3><span class="m">↗</span>Built for the whole chain</h3>
+          <p>Clinicians stay current, providers stay accountable, boards stay assured — plus an "ask a governance specialist" function for the hard questions.</p>
+        </div>
+      </div>
+
+      <div class="cta">
+        <a class="btn" href="mailto:info@hg-au.com?subject=HG%20Intel%20—%20register%20interest">Register your interest &rarr;</a>
+        <span class="note">Early provider trials commence February 2027. Australian-built and hosted.</span>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <small class="disclaimer">
+        HG Intel is a Holistic Governance product. It provides decision <em>support</em>, not legal,
+        medical or clinical advice — a qualified professional decides.
+      </small>
+      <small>&copy; 2026 Holistic Governance · <a href="https://hg-au.com">hg-au.com</a></small>
+    </div>
+  </footer>
+</body>
+</html>
