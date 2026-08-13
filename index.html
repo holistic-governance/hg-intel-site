@@ -22,7 +22,8 @@
     --ink:#0f172a;        /* Holistic navy / headline ink */
     --cyber:#0577C7;      /* accent (italic words, links) */
     --bright:#00B4FF;     /* mark + bright focus (gradients, icons) */
-    --accent-text:#0499D9;/* cyber accent for TEXT — slightly darker than #00B4FF for readability */
+    --accent-text:#0499D9;/* cyber accent for small/functional TEXT */
+    --accent-lite:#51A9CD;/* staging light blue — headings + wordmark */
     --violet:#8b5cf6;
     --soft:#64748b;       /* muted labels */
     --body:#334155;       /* lead / body */
@@ -44,8 +45,12 @@
     background:
       radial-gradient(ellipse 44% 65% at 8% 46%,#00B4FF,transparent 62%),
       radial-gradient(ellipse 44% 62% at 44% 40%,#0577C7,transparent 62%),
-      radial-gradient(ellipse 28% 44% at 99% 24%,#a78bfa,transparent 66%)}
+      radial-gradient(ellipse 34% 50% at 97% 30%,#7dd3fc,transparent 64%)}
   svg.streams{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+  /* coming-soon ribbon */
+  .topribbon{position:relative;z-index:5;background:linear-gradient(90deg,#0577C7,#00B4FF);
+    color:#fff;text-align:center;font-size:13px;font-weight:600;letter-spacing:.13em;
+    text-transform:uppercase;padding:11px 14px}
 
   /* ---- page frame ---- */
   .page{position:relative;z-index:1;width:100%;max-width:960px;margin:0 auto;
@@ -58,9 +63,9 @@
   .brand .mark{height:48px;width:auto}
   .brand .lockup{display:flex;flex-direction:column;line-height:1.02}
   .brand .product{font-family:var(--serif);font-weight:600;font-size:30px;
-    letter-spacing:.005em;color:var(--accent-text)}
-  .brand .product em{font-style:italic;font-weight:600;color:var(--accent-text)}
-  .brand .by{font-family:var(--sans);font-size:11.5px;font-weight:500;
+    letter-spacing:.005em;color:var(--accent-lite)}
+  .brand .product em{font-style:normal;font-weight:600;color:var(--accent-lite)}
+  .brand .by{font-family:var(--sans);font-style:italic;font-size:12px;font-weight:500;
     letter-spacing:.02em;color:var(--soft);margin-top:3px}
 
   /* ---- hero ---- */
@@ -73,7 +78,7 @@
 
   h1{font-family:var(--serif);font-weight:400;line-height:1.12;letter-spacing:-.005em;
     font-size:clamp(28px,4.3vw,48px);margin:24px 0 0;max-width:none}
-  h1 em{font-style:italic;color:var(--accent-text)}
+  h1 em{font-style:italic;color:var(--accent-lite)}
 
   .lead{font-size:clamp(17px,2.2vw,21px);color:var(--body);margin:26px 0 0;
     max-width:60ch;line-height:1.65}
@@ -148,6 +153,7 @@
   .chip i{width:9px;height:9px;border-radius:50%;flex:none}
 
   @media (max-width:560px){
+    .topribbon{font-size:10.5px;letter-spacing:.06em;padding:10px 12px}
     .page{padding:32px 20px 30px}
     .brand .product{font-size:25px}
     .pill{width:100%;justify-content:center}
@@ -156,6 +162,7 @@
 </style>
 </head>
 <body>
+  <div class="topribbon">✦&nbsp;&nbsp;Coming soon — HG Intel launches 2027&nbsp;&nbsp;✦</div>
   <div class="glow" aria-hidden="true"></div>
   <svg class="streams" viewBox="0 0 1080 1350" fill="none" preserveAspectRatio="none" aria-hidden="true">
     <path d="M132 -40 C228 250, 420 560, 540 820 C684 1050, 828 1280, 924 1400" stroke="url(#g1)" stroke-width="2"/>
@@ -183,7 +190,6 @@
           <span class="by">by Holistic Governance</span>
         </div>
       </div>
-      <span class="topcta">Launching 2027</span>
     </header>
 
     <main>
