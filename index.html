@@ -42,9 +42,9 @@
   .glow{position:fixed;left:0;right:0;top:-200px;height:640px;filter:blur(60px);opacity:.5;
     pointer-events:none;z-index:0;
     background:
-      radial-gradient(ellipse 42% 65% at 8% 46%,#00B4FF,transparent 62%),
-      radial-gradient(ellipse 42% 62% at 46% 40%,#0577C7,transparent 62%),
-      radial-gradient(ellipse 40% 62% at 94% 50%,#8b5cf6,transparent 62%)}
+      radial-gradient(ellipse 44% 65% at 8% 46%,#00B4FF,transparent 62%),
+      radial-gradient(ellipse 44% 62% at 44% 40%,#0577C7,transparent 62%),
+      radial-gradient(ellipse 28% 44% at 99% 24%,#a78bfa,transparent 66%)}
   svg.streams{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
 
   /* ---- page frame ---- */
@@ -125,6 +125,28 @@
   footer a{color:var(--cyber);text-decoration:none}
   footer a:hover{text-decoration:underline}
 
+  /* top bar */
+  .topbar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  .topcta{font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--accent-text);background:#eaf7fd;padding:8px 15px;border-radius:999px;white-space:nowrap}
+
+  /* trust row */
+  .trust{display:flex;flex-wrap:wrap;align-items:center;gap:4px;margin-top:26px;
+    font-size:13.5px;color:var(--soft)}
+  .trust span{display:inline-flex;align-items:center}
+  .trust span:not(:first-child)::before{content:"·";margin:0 11px;color:#cbd5e1}
+  .trust .strong{color:var(--ink);font-weight:600}
+
+  /* care settings */
+  .settings{margin-top:54px}
+  .settings-label{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--soft);margin-bottom:16px}
+  .chips{display:flex;flex-wrap:wrap;gap:11px}
+  .chip{display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:600;color:var(--ink);
+    background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 16px;
+    box-shadow:0 6px 16px -11px rgba(15,23,42,.35)}
+  .chip i{width:9px;height:9px;border-radius:50%;flex:none}
+
   @media (max-width:560px){
     .page{padding:32px 20px 30px}
     .brand .product{font-size:25px}
@@ -136,12 +158,12 @@
 <body>
   <div class="glow" aria-hidden="true"></div>
   <svg class="streams" viewBox="0 0 1080 1350" fill="none" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M132 -40 C216 360, 396 800, 540 1130 C684 1250, 852 1340, 924 1400" stroke="url(#g1)" stroke-width="2"/>
-    <path d="M285 -40 C338 360, 450 800, 540 1130 C630 1250, 735 1340, 780 1400" stroke="url(#g2)" stroke-width="2"/>
-    <path d="M438 -40 C459 360, 504 800, 540 1130 C576 1250, 618 1340, 636 1400" stroke="url(#g3)" stroke-width="2"/>
-    <path d="M642 -40 C621 360, 576 800, 540 1130 C504 1250, 462 1340, 444 1400" stroke="url(#g4)" stroke-width="2"/>
-    <path d="M795 -40 C743 360, 630 800, 540 1130 C450 1250, 345 1340, 300 1400" stroke="url(#g5)" stroke-width="2"/>
-    <path d="M948 -40 C864 360, 684 800, 540 1130 C396 1250, 228 1340, 156 1400" stroke="url(#g6)" stroke-width="2"/>
+    <path d="M132 -40 C228 250, 420 560, 540 820 C684 1050, 828 1280, 924 1400" stroke="url(#g1)" stroke-width="2"/>
+    <path d="M285 -40 C345 250, 465 560, 540 820 C630 1050, 720 1280, 780 1400" stroke="url(#g2)" stroke-width="2"/>
+    <path d="M438 -40 C462 250, 510 560, 540 820 C576 1050, 612 1280, 636 1400" stroke="url(#g3)" stroke-width="2"/>
+    <path d="M642 -40 C618 250, 570 560, 540 820 C504 1050, 468 1280, 444 1400" stroke="url(#g4)" stroke-width="2"/>
+    <path d="M795 -40 C735 250, 615 560, 540 820 C450 1050, 360 1280, 300 1400" stroke="url(#g5)" stroke-width="2"/>
+    <path d="M948 -40 C852 250, 660 560, 540 820 C396 1050, 252 1280, 156 1400" stroke="url(#g6)" stroke-width="2"/>
     <defs>
       <linearGradient id="g1" x1="540" y1="0" x2="540" y2="1400" gradientUnits="userSpaceOnUse"><stop stop-color="#00B4FF" stop-opacity="0"/><stop offset="0.4" stop-color="#00B4FF" stop-opacity="0.5"/><stop offset="0.84" stop-color="#00B4FF" stop-opacity="0.32"/><stop offset="1" stop-color="#00B4FF" stop-opacity="0"/></linearGradient>
       <linearGradient id="g2" x1="540" y1="0" x2="540" y2="1400" gradientUnits="userSpaceOnUse"><stop stop-color="#8b5cf6" stop-opacity="0"/><stop offset="0.4" stop-color="#8b5cf6" stop-opacity="0.5"/><stop offset="0.84" stop-color="#8b5cf6" stop-opacity="0.32"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></linearGradient>
@@ -153,24 +175,35 @@
   </svg>
 
   <div class="page">
-    <header class="brand">
-      <img class="mark" src="hg-mark.svg" alt="" />
-      <div class="lockup">
-        <span class="product">HG <em>Intel</em></span>
-        <span class="by">by Holistic Governance</span>
+    <header class="topbar">
+      <div class="brand">
+        <img class="mark" src="hg-mark.svg" alt="" />
+        <div class="lockup">
+          <span class="product">HG <em>Intel</em></span>
+          <span class="by">by Holistic Governance</span>
+        </div>
       </div>
+      <span class="topcta">Launching 2027</span>
     </header>
 
     <main>
-      <span class="kicker">HG Intel · Launching 2027</span>
+      <h1 class="halo">Every regulatory change that matters — <em>found, mapped, and ready.</em></h1>
 
-      <h1 class="halo">Healthcare's rules keep changing. <em>Staying current shouldn't be this hard.</em></h1>
+      <p class="lead halo">HG Intel continuously monitors AU regulators, standards and evidence, then maps each change to <strong>your</strong> obligations — so you don't miss what matters across aged care, Support at Home, NDIS and hospital governance.</p>
 
-      <p class="lead halo">
-        Regulation, legislation and best practice sit across dozens of sources, all moving at once —
-        aged care's biggest reset in 25 years, upcoming renewed NSQHS Standards, and an evidence base
-        that never stops. <strong>HG Intel brings it into one place.</strong>
-      </p>
+      <div class="cta">
+        <a class="pill" href="mailto:info@hg-au.com?subject=HG%20Intel%20—%20register%20interest">Register your interest &rarr;</a>
+        <div class="trials">
+          <span class="txt">Early provider trials commence <span class="date">February 2027</span></span>
+        </div>
+      </div>
+
+      <div class="trust">
+        <span class="strong">AU data residency</span>
+        <span>Cited to the primary source</span>
+        <span>RN / SME-reviewed</span>
+        <span>Decision support, not advice</span>
+      </div>
 
       <div class="cards">
         <div class="card">
@@ -190,14 +223,21 @@
         </div>
       </div>
 
-      <div class="cta">
-        <a class="pill" href="mailto:info@hg-au.com?subject=HG%20Intel%20—%20register%20interest">Register your interest &rarr;</a>
-        <div class="trials">
-          <span class="txt">Early provider trials commence <span class="date">February 2027</span></span>
-          <span class="div"></span>
-          <span class="au">🇦🇺 Australian-built &amp; hosted</span>
+      <section class="settings" aria-label="Care and health settings">
+        <div class="settings-label">Built for every AU care &amp; health setting</div>
+        <div class="chips">
+          <span class="chip"><i style="background:#00B4FF"></i>Aged Care</span>
+          <span class="chip"><i style="background:#10b981"></i>Support at Home</span>
+          <span class="chip"><i style="background:#8b5cf6"></i>CHSP</span>
+          <span class="chip"><i style="background:#ec4899"></i>Respite</span>
+          <span class="chip"><i style="background:#f97316"></i>NDIS &amp; Disability</span>
+          <span class="chip"><i style="background:#b8952f"></i>Hospitals</span>
+          <span class="chip"><i style="background:#0ea5e9"></i>Day Theatre</span>
+          <span class="chip"><i style="background:#10b981"></i>Medical &amp; Clinical Devices</span>
+          <span class="chip"><i style="background:#8b5cf6"></i>Primary Care</span>
+          <span class="chip"><i style="background:#ec4899"></i>Mental Health</span>
         </div>
-      </div>
+      </section>
     </main>
 
     <footer>
