@@ -4,194 +4,194 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>HG Intel — Regulatory & best-practice intelligence for healthcare</title>
-<meta name="description" content="HG Intel consolidates healthcare regulation, legislation and best practice into one place — monitored continuously, reviewed by human clinical-governance experts, filtered to you. Launching 2027." />
+<meta name="description" content="HG Intel consolidates healthcare regulation, legislation and best practice into one place — monitored continuously, reviewed by human clinical-governance experts, filtered to you. A Holistic Governance product. Launching 2027." />
 <meta property="og:title" content="HG Intel — launching 2027" />
-<meta property="og:description" content="One source of truth for healthcare regulation, legislation and best practice. Human-reviewed. Australian-built and hosted." />
+<meta property="og:description" content="One source of truth for healthcare regulation, legislation and best practice. Human-reviewed. Australian-built and hosted. A Holistic Governance product." />
 <meta property="og:type" content="website" />
 <meta name="theme-color" content="#00B4FF" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%B7%3C/text%3E%3C/svg%3E" />
+<link rel="icon" href="favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
   :root{
-    --ink:#0A1F3C;          /* deep navy ink for text */
-    --ink-soft:#41546F;     /* secondary text */
-    --ink-faint:#7C8BA1;    /* captions */
-    --cyber:#00B4FF;        /* bright cyber (gradients/focus) */
-    --cyber-mid:#0577C7;    /* accent text / links */
-    --cyber-deep:#0A4D8C;   /* small text on tint */
+    --ink:#0f172a;        /* Holistic navy / headline ink */
+    --cyber:#0577C7;      /* accent (italic words, links) */
+    --bright:#00B4FF;     /* mark + bright focus */
     --violet:#8b5cf6;
-    --line:#E4ECF5;
-    /* thread coding */
-    --t-reg:#00B4FF; --t-clin:#10b981; --t-evid:#8b5cf6; --t-priv:#ec4899; --t-fund:#f97316;
+    --soft:#64748b;       /* muted labels */
+    --body:#334155;       /* lead / body */
+    --line:#eef2f7;
+    /* thread coding (matches the HG Intel app ThreadKey) */
+    --t-reg:#00B4FF; --t-clin:#10b981; --t-ev:#8b5cf6; --t-priv:#ec4899; --t-fund:#f97316;
+    --serif:'Cormorant Garamond','Garamond','Georgia',serif;
     --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-  body{
-    font-family:var(--sans);
-    color:var(--ink);
-    background:#FFFFFF;
-    line-height:1.55;
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    overflow-x:hidden;
-  }
+  body{font-family:var(--sans);color:var(--ink);background:#fff;position:relative;
+    min-height:100vh;overflow-x:hidden;line-height:1.6}
 
-  /* ---- hero glow + streams background ---- */
-  .bg{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
-  .glow{position:absolute;border-radius:50%;filter:blur(60px);opacity:.5}
-  .glow.a{width:640px;height:640px;top:-220px;right:-160px;
-    background:radial-gradient(circle at 30% 30%,var(--cyber),transparent 62%)}
-  .glow.b{width:560px;height:560px;top:-120px;right:120px;
-    background:radial-gradient(circle at 50% 50%,var(--cyber-mid),transparent 60%);opacity:.35}
-  .glow.c{width:520px;height:520px;bottom:-220px;left:-140px;
-    background:radial-gradient(circle at 50% 50%,var(--violet),transparent 60%);opacity:.30}
-  .streams{position:absolute;inset:0;width:100%;height:100%}
-  .streams path{fill:none;stroke-width:2;opacity:.32;
-    stroke-dasharray:10 14;animation:flow 9s linear infinite}
-  /* soft readability scrim so streams sit behind the copy */
-  .bg::after{content:"";position:absolute;inset:0;
-    background:radial-gradient(60% 55% at 34% 46%,rgba(255,255,255,.82),rgba(255,255,255,0) 70%)}
-  @keyframes flow{to{stroke-dashoffset:-480}}
-  @media (prefers-reduced-motion:reduce){.streams path{animation:none}}
+  /* ---- backdrop: top glow + gradient fade-threads ---- */
+  .glow{position:fixed;left:0;right:0;top:-200px;height:640px;filter:blur(60px);opacity:.5;
+    pointer-events:none;z-index:0;
+    background:
+      radial-gradient(ellipse 42% 65% at 8% 46%,#00B4FF,transparent 62%),
+      radial-gradient(ellipse 42% 62% at 46% 40%,#0577C7,transparent 62%),
+      radial-gradient(ellipse 40% 62% at 94% 50%,#8b5cf6,transparent 62%)}
+  svg.streams{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
 
-  /* ---- layout ---- */
-  header,main,footer{position:relative;z-index:1;width:100%}
-  .wrap{max-width:920px;margin:0 auto;padding:0 28px}
+  /* ---- page frame ---- */
+  .page{position:relative;z-index:1;max-width:960px;margin:0 auto;
+    padding:44px 28px 40px;display:flex;flex-direction:column;min-height:100vh;
+    align-items:center;text-align:center}
+  .halo{text-shadow:0 0 6px #fff,0 0 14px #fff,0 0 26px #fff,0 0 40px #fff}
 
-  header{padding:30px 0 10px}
-  .brand{display:flex;align-items:center;gap:11px;font-weight:700;
-    letter-spacing:-.01em;font-size:20px;color:var(--ink)}
-  .brand .dot{width:13px;height:13px;border-radius:4px;
-    background:linear-gradient(135deg,var(--cyber),var(--cyber-mid));
-    box-shadow:0 0 0 4px rgba(0,180,255,.14)}
-  .brand span{color:var(--cyber-mid)}
+  /* ---- brand lockup ---- */
+  .brand{display:flex;align-items:center;gap:14px}
+  .brand .mark{height:46px;width:auto}
+  .brand .wordmark{font-family:var(--serif);font-weight:500;font-size:32px;
+    letter-spacing:.005em;color:var(--ink);line-height:1}
+  .brand .wordmark em{font-style:italic;font-weight:500;color:var(--cyber)}
 
-  main{flex:1;display:flex;align-items:center;padding:36px 0 20px}
-  .kicker{display:inline-flex;align-items:center;gap:8px;
-    font-size:12.5px;font-weight:700;letter-spacing:.10em;text-transform:uppercase;
-    color:#fff;padding:7px 15px;border-radius:999px;
-    background:linear-gradient(90deg,#7dd3fc,var(--cyber));
-    box-shadow:0 6px 18px -6px rgba(0,180,255,.6)}
-  .kicker::before{content:"";width:7px;height:7px;border-radius:50%;
-    background:#fff;box-shadow:0 0 0 3px rgba(255,255,255,.35)}
+  /* ---- hero ---- */
+  main{flex:1;display:flex;flex-direction:column;align-items:center;
+    justify-content:center;width:100%;padding:26px 0 8px}
+  .kicker{font-family:var(--sans);font-weight:600;font-size:13px;
+    letter-spacing:.2em;text-transform:uppercase;color:var(--cyber)}
+  .kicker::after{content:"";display:block;width:44px;height:2px;margin:12px auto 0;
+    border-radius:2px;background:linear-gradient(90deg,var(--bright),var(--cyber))}
 
-  h1{font-size:clamp(34px,6vw,58px);line-height:1.06;letter-spacing:-.025em;
-    font-weight:800;margin:22px 0 0;max-width:16ch}
-  h1 em{font-style:italic;font-weight:800;
-    background:linear-gradient(120deg,var(--cyber),var(--cyber-mid) 55%,var(--violet));
-    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  h1{font-family:var(--serif);font-weight:400;line-height:1.06;letter-spacing:-.01em;
+    font-size:clamp(38px,6.4vw,72px);margin:26px 0 0;max-width:17ch}
+  h1 em{font-style:italic;color:var(--cyber)}
 
-  .lead{font-size:clamp(16.5px,2.3vw,20px);color:var(--ink-soft);
-    margin-top:22px;max-width:56ch}
+  .lead{font-size:clamp(17px,2.2vw,21px);color:var(--body);margin:26px auto 0;
+    max-width:60ch;line-height:1.65}
+  .lead strong{color:var(--ink);font-weight:600}
 
-  /* thread chips */
-  .threads{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}
-  .chip{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;
-    color:var(--ink);background:#fff;border:1px solid var(--line);
-    padding:8px 14px;border-radius:999px;box-shadow:0 1px 2px rgba(10,31,60,.04)}
-  .chip i{width:9px;height:9px;border-radius:50%;display:inline-block}
+  /* ---- thread key (mirrors the app's ThreadKey) ---- */
+  .threads{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
+    gap:8px 18px;margin-top:30px}
+  .threads .label{font-size:11px;font-weight:600;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--soft)}
+  .threads .th{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;color:#475569}
+  .threads .th i{width:22px;height:3px;border-radius:3px;display:inline-block}
 
-  /* value points */
-  .points{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:14px;margin-top:34px}
-  .point{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 18px;
-    box-shadow:0 10px 30px -22px rgba(10,31,60,.35)}
-  .point h3{font-size:15px;font-weight:700;letter-spacing:-.01em;display:flex;align-items:center;gap:9px}
-  .point h3 .m{width:26px;height:26px;border-radius:8px;flex:none;display:grid;place-items:center;
-    background:linear-gradient(135deg,#EAF9FF,#C9EFFF);color:var(--cyber-deep);font-size:14px}
-  .point p{font-size:13.6px;color:var(--ink-soft);margin-top:9px}
+  /* ---- brand cards (mirrors the briefing .reg card) ---- */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:18px;margin-top:40px;width:100%;text-align:left}
+  .card{background:#fff;border:1px solid var(--line);border-radius:18px;
+    padding:22px 22px 24px;box-shadow:0 18px 50px rgba(15,23,42,.10)}
+  .card .mono{width:42px;height:42px;border-radius:11px;display:flex;
+    align-items:center;justify-content:center;color:#fff;font-size:19px;margin-bottom:14px}
+  .card h3{font-family:var(--serif);font-weight:600;font-size:22px;color:var(--ink);line-height:1.15}
+  .card p{font-size:14.5px;color:var(--body);margin-top:9px;line-height:1.55}
 
-  /* cta */
-  .cta{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:34px}
-  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:15px;
-    padding:13px 24px;border-radius:999px;text-decoration:none;
-    color:#fff;background:linear-gradient(90deg,var(--cyber-mid),var(--cyber));
-    box-shadow:0 12px 26px -10px rgba(5,119,199,.7);transition:transform .15s ease,box-shadow .15s ease}
-  .btn:hover{transform:translateY(-1px);box-shadow:0 16px 30px -10px rgba(5,119,199,.75)}
-  .cta .note{font-size:13.5px;color:var(--ink-faint)}
+  /* ---- CTA ---- */
+  .cta{margin-top:42px;display:flex;flex-direction:column;align-items:center;gap:16px}
+  .pill{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);
+    font-weight:600;font-size:16px;color:#fff;background:var(--ink);
+    padding:16px 34px;border-radius:999px;text-decoration:none;
+    box-shadow:0 16px 38px -14px rgba(15,23,42,.5);transition:transform .15s ease,box-shadow .15s ease}
+  .pill:hover{transform:translateY(-1px);box-shadow:0 20px 42px -14px rgba(15,23,42,.55)}
+  .cta .note{font-size:14px;color:var(--soft)}
 
-  footer{padding:30px 0 34px;border-top:1px solid var(--line);margin-top:44px}
-  .foot{display:flex;flex-wrap:wrap;gap:14px 26px;align-items:center;justify-content:space-between}
-  .foot small{color:var(--ink-faint);font-size:12.5px;line-height:1.5}
-  .foot a{color:var(--cyber-mid);text-decoration:none}
-  .foot a:hover{text-decoration:underline}
-  .disclaimer{max-width:60ch}
+  /* ---- footer ---- */
+  footer{margin-top:48px;padding-top:26px;border-top:1px solid var(--line);width:100%;
+    display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;
+    text-align:left}
+  footer .disclaimer{max-width:64ch;font-size:12.5px;color:var(--soft);line-height:1.55}
+  footer .disclaimer em{font-style:italic;color:var(--body)}
+  footer .sig{font-family:var(--serif);font-size:17px;color:var(--ink);white-space:nowrap}
+  footer .sig em{font-style:italic;color:var(--cyber)}
+  footer a{color:var(--cyber);text-decoration:none}
+  footer a:hover{text-decoration:underline}
 
   @media (max-width:560px){
-    header{padding:22px 0 6px}
-    .cta{gap:12px}
-    .btn{width:100%;justify-content:center}
+    .page{padding:32px 20px 30px}
+    .brand .wordmark{font-size:26px}
+    .pill{width:100%;justify-content:center}
+    footer{justify-content:center;text-align:center}
   }
 </style>
 </head>
 <body>
-  <div class="bg" aria-hidden="true">
-    <div class="glow a"></div><div class="glow b"></div><div class="glow c"></div>
-    <svg class="streams" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
-      <path d="M-40,150 C260,60 520,300 820,180 1080,80 1180,240 1300,160" stroke="#00B4FF"/>
-      <path d="M-40,300 C240,220 560,430 860,330 1120,250 1200,400 1300,320" stroke="#8b5cf6"/>
-      <path d="M-40,470 C300,400 540,560 900,470 1120,420 1220,540 1300,470" stroke="#0ea5e9"/>
-      <path d="M-40,620 C260,560 620,700 900,600 1120,540 1240,660 1300,600" stroke="#10b981"/>
-    </svg>
-  </div>
+  <div class="glow" aria-hidden="true"></div>
+  <svg class="streams" viewBox="0 0 1080 1350" fill="none" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path d="M300 250 C300 470 80 470 80 700 C80 1090 80 1040 760 1330" stroke="url(#g1)" stroke-width="2.5"/>
+    <path d="M420 250 C420 450 190 450 190 660 C190 1050 190 1020 668 1320" stroke="url(#g2)" stroke-width="2.5"/>
+    <path d="M520 250 C520 490 340 490 340 720 C340 1040 340 1010 590 1315" stroke="url(#g3)" stroke-width="2.5"/>
+    <path d="M780 250 C780 470 1000 470 1000 700 C1000 1090 1000 1040 320 1330" stroke="url(#g4)" stroke-width="2.5"/>
+    <path d="M660 250 C660 450 890 450 890 660 C890 1050 890 1020 412 1320" stroke="url(#g5)" stroke-width="2.5"/>
+    <path d="M560 250 C560 490 740 490 740 720 C740 1040 740 1010 490 1315" stroke="url(#g6)" stroke-width="2.5"/>
+    <defs>
+      <linearGradient id="g1" x1="540" y1="249" x2="540" y2="1350" gradientUnits="userSpaceOnUse"><stop stop-color="#00B4FF" stop-opacity="0.10"/><stop offset="0.5" stop-color="#00B4FF"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0.12"/></linearGradient>
+      <linearGradient id="g2" x1="540" y1="249" x2="540" y2="1350" gradientUnits="userSpaceOnUse"><stop stop-color="#8b5cf6" stop-opacity="0.10"/><stop offset="0.5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#ec4899" stop-opacity="0.12"/></linearGradient>
+      <linearGradient id="g3" x1="540" y1="249" x2="540" y2="1350" gradientUnits="userSpaceOnUse"><stop stop-color="#ec4899" stop-opacity="0.10"/><stop offset="0.5" stop-color="#ec4899"/><stop offset="1" stop-color="#f97316" stop-opacity="0.12"/></linearGradient>
+      <linearGradient id="g4" x1="540" y1="249" x2="540" y2="1350" gradientUnits="userSpaceOnUse"><stop stop-color="#10b981" stop-opacity="0.10"/><stop offset="0.5" stop-color="#10b981"/><stop offset="1" stop-color="#0ea5e9" stop-opacity="0.12"/></linearGradient>
+      <linearGradient id="g5" x1="540" y1="249" x2="540" y2="1350" gradientUnits="userSpaceOnUse"><stop stop-color="#f97316" stop-opacity="0.10"/><stop offset="0.5" stop-color="#f97316"/><stop offset="1" stop-color="#10b981" stop-opacity="0.12"/></linearGradient>
+      <linearGradient id="g6" x1="540" y1="249" x2="540" y2="1350" gradientUnits="userSpaceOnUse"><stop stop-color="#0f172a" stop-opacity="0.08"/><stop offset="0.5" stop-color="#0f172a" stop-opacity="0.7"/><stop offset="1" stop-color="#0ea5e9" stop-opacity="0.12"/></linearGradient>
+    </defs>
+  </svg>
 
-  <header>
-    <div class="wrap">
-      <div class="brand"><span class="dot"></span>HG&nbsp;<span>Intel</span></div>
-    </div>
-  </header>
+  <div class="page">
+    <header class="brand">
+      <img class="mark" src="hg-mark.svg" alt="Holistic Governance" />
+      <div class="wordmark">Holistic <em>Governance</em></div>
+    </header>
 
-  <main>
-    <div class="wrap">
-      <span class="kicker">Launching 2027</span>
+    <main>
+      <span class="kicker">HG Intel · Launching 2027</span>
 
-      <h1>Healthcare's rules keep changing. <em>Staying current shouldn't be this hard.</em></h1>
+      <h1 class="halo">Healthcare's rules keep changing. <em>Staying current shouldn't be this hard.</em></h1>
 
-      <p class="lead">
+      <p class="lead halo">
         Regulation, legislation and best practice sit across dozens of sources, all moving at once —
         aged care's biggest reset in 25 years, upcoming renewed NSQHS Standards, and an evidence base
         that never stops. <strong>HG Intel brings it into one place.</strong>
       </p>
 
-      <div class="threads" role="list">
-        <span class="chip" role="listitem"><i style="background:var(--t-reg)"></i>Regulatory</span>
-        <span class="chip" role="listitem"><i style="background:var(--t-clin)"></i>Clinical</span>
-        <span class="chip" role="listitem"><i style="background:var(--t-evid)"></i>Best practice</span>
-        <span class="chip" role="listitem"><i style="background:var(--t-priv)"></i>Privacy</span>
-        <span class="chip" role="listitem"><i style="background:var(--t-fund)"></i>Funding</span>
+      <div class="threads" aria-label="What HG Intel tracks">
+        <span class="label">Threads</span>
+        <span class="th"><i style="background:var(--t-reg)"></i>Regulatory</span>
+        <span class="th"><i style="background:var(--t-clin)"></i>Clinical</span>
+        <span class="th"><i style="background:var(--t-ev)"></i>Evidence</span>
+        <span class="th"><i style="background:var(--t-priv)"></i>Privacy</span>
+        <span class="th"><i style="background:var(--t-fund)"></i>Funding</span>
       </div>
 
-      <div class="points">
-        <div class="point">
-          <h3><span class="m">◎</span>One source of truth</h3>
+      <div class="cards">
+        <div class="card">
+          <div class="mono" style="background:linear-gradient(135deg,#00B4FF,#0577C7)">◎</div>
+          <h3>One source of truth</h3>
           <p>Regulators and the evidence base monitored continuously, filtered to your sector and topics, with alerts when something relevant moves.</p>
         </div>
-        <div class="point">
-          <h3><span class="m">✓</span>Human-reviewed</h3>
+        <div class="card">
+          <div class="mono" style="background:linear-gradient(135deg,#10b981,#0ea5e9)">✓</div>
+          <h3>Human-reviewed</h3>
           <p>Every update is checked by clinical-governance experts before it reaches you. AI does the scanning; qualified people do the judging.</p>
         </div>
-        <div class="point">
-          <h3><span class="m">↗</span>Built for the whole chain</h3>
-          <p>Clinicians stay current, providers stay accountable, boards stay assured — plus an "ask a governance specialist" function for the hard questions.</p>
+        <div class="card">
+          <div class="mono" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)">↗</div>
+          <h3>Built for the whole chain</h3>
+          <p>Clinicians stay current, providers stay accountable, boards stay assured — plus an “ask a governance specialist” function for the hard questions.</p>
         </div>
       </div>
 
       <div class="cta">
-        <a class="btn" href="mailto:info@hg-au.com?subject=HG%20Intel%20—%20register%20interest">Register your interest &rarr;</a>
-        <span class="note">Early provider trials commence February 2027. Australian-built and hosted.</span>
+        <a class="pill" href="mailto:info@hg-au.com?subject=HG%20Intel%20—%20register%20interest">Register your interest &rarr;</a>
+        <span class="note">Early provider trials commence February 2027 · Australian-built and hosted.</span>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <footer>
-    <div class="wrap foot">
-      <small class="disclaimer">
+    <footer>
+      <span class="disclaimer">
         HG Intel is a Holistic Governance product. It provides decision <em>support</em>, not legal,
         medical or clinical advice — a qualified professional decides.
-      </small>
-      <small>&copy; 2026 Holistic Governance · <a href="https://hg-au.com">hg-au.com</a></small>
-    </div>
-  </footer>
+      </span>
+      <span class="sig">Holistic <em>Governance</em> · <a href="https://hg-au.com">hg-au.com</a></span>
+    </footer>
+  </div>
 </body>
 </html>
