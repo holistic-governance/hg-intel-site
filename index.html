@@ -46,9 +46,6 @@
       radial-gradient(ellipse 42% 62% at 46% 40%,#0577C7,transparent 62%),
       radial-gradient(ellipse 40% 62% at 94% 50%,#8b5cf6,transparent 62%)}
   svg.streams{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
-  /* fade the weave to clean white across the lower section (behind CTA + callout + footer) */
-  .veil{position:absolute;left:0;right:0;bottom:0;height:44%;min-height:420px;z-index:0;
-    pointer-events:none;background:linear-gradient(to bottom,rgba(255,255,255,0),#fff 66%)}
 
   /* ---- page frame ---- */
   .page{position:relative;z-index:1;width:100%;max-width:960px;margin:0 auto;
@@ -57,11 +54,14 @@
   .halo{text-shadow:0 0 6px #fff,0 0 14px #fff,0 0 26px #fff,0 0 40px #fff}
 
   /* ---- brand lockup ---- */
-  .brand{display:flex;align-items:center;gap:14px}
-  .brand .mark{height:46px;width:auto}
-  .brand .wordmark{font-family:var(--serif);font-weight:500;font-size:32px;
-    letter-spacing:.005em;color:var(--ink);line-height:1}
-  .brand .wordmark em{font-style:italic;font-weight:500;color:var(--accent-text)}
+  .brand{display:flex;align-items:center;gap:13px}
+  .brand .mark{height:48px;width:auto}
+  .brand .lockup{display:flex;flex-direction:column;line-height:1.02}
+  .brand .product{font-family:var(--serif);font-weight:600;font-size:30px;
+    letter-spacing:.005em;color:var(--ink)}
+  .brand .product em{font-style:italic;font-weight:600;color:var(--accent-text)}
+  .brand .by{font-family:var(--sans);font-size:11.5px;font-weight:500;
+    letter-spacing:.02em;color:var(--soft);margin-top:3px}
 
   /* ---- hero ---- */
   main{flex:1;display:flex;flex-direction:column;align-items:stretch;
@@ -71,8 +71,8 @@
   .kicker::after{content:"";display:block;width:44px;height:2px;margin:12px 0 0;
     border-radius:2px;background:linear-gradient(90deg,var(--bright),var(--cyber))}
 
-  h1{font-family:var(--serif);font-weight:400;line-height:1.06;letter-spacing:-.01em;
-    font-size:clamp(38px,6.4vw,72px);margin:26px 0 0;max-width:17ch}
+  h1{font-family:var(--serif);font-weight:400;line-height:1.12;letter-spacing:-.005em;
+    font-size:clamp(28px,4.3vw,48px);margin:24px 0 0;max-width:none}
   h1 em{font-style:italic;color:var(--accent-text)}
 
   .lead{font-size:clamp(17px,2.2vw,21px);color:var(--body);margin:26px 0 0;
@@ -100,10 +100,10 @@
   /* ---- CTA ---- */
   .cta{margin-top:42px;display:flex;flex-direction:column;align-items:flex-start;gap:16px}
   .pill{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);
-    font-weight:600;font-size:16px;color:#fff;background:var(--ink);
+    font-weight:600;font-size:16px;color:#fff;background:linear-gradient(90deg,#0577C7,#00B4FF);
     padding:16px 34px;border-radius:999px;text-decoration:none;
-    box-shadow:0 16px 38px -14px rgba(15,23,42,.5);transition:transform .15s ease,box-shadow .15s ease}
-  .pill:hover{transform:translateY(-1px);box-shadow:0 20px 42px -14px rgba(15,23,42,.55)}
+    box-shadow:0 16px 38px -14px rgba(5,119,199,.6);transition:transform .15s ease,box-shadow .15s ease}
+  .pill:hover{transform:translateY(-1px);box-shadow:0 20px 42px -12px rgba(5,119,199,.68)}
   .cta .note{font-size:14px;color:var(--soft);max-width:100%}
   /* trials callout bar (opaque so the weave never shows through the text) */
   .trials{display:flex;align-items:center;gap:16px;flex-wrap:wrap;max-width:100%;
@@ -127,7 +127,7 @@
 
   @media (max-width:560px){
     .page{padding:32px 20px 30px}
-    .brand .wordmark{font-size:26px}
+    .brand .product{font-size:25px}
     .pill{width:100%;justify-content:center}
     footer{justify-content:flex-start;text-align:left}
   }
@@ -136,27 +136,29 @@
 <body>
   <div class="glow" aria-hidden="true"></div>
   <svg class="streams" viewBox="0 0 1080 1350" fill="none" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M300 -40 C300 300 80 300 80 640 C80 1090 80 1040 760 1390" stroke="url(#g1)" stroke-width="2.5"/>
-    <path d="M420 -40 C420 280 190 280 190 600 C190 1050 190 1020 668 1390" stroke="url(#g2)" stroke-width="2.5"/>
-    <path d="M520 -40 C520 320 340 320 340 660 C340 1040 340 1010 590 1390" stroke="url(#g3)" stroke-width="2.5"/>
-    <path d="M780 -40 C780 300 1000 300 1000 640 C1000 1090 1000 1040 320 1390" stroke="url(#g4)" stroke-width="2.5"/>
-    <path d="M660 -40 C660 280 890 280 890 600 C890 1050 890 1020 412 1390" stroke="url(#g5)" stroke-width="2.5"/>
-    <path d="M560 -40 C560 320 740 320 740 660 C740 1040 740 1010 490 1390" stroke="url(#g6)" stroke-width="2.5"/>
+    <path d="M132 -40 C228 250, 408 560, 540 850 C672 1140, 852 1300, 948 1390" stroke="url(#g1)" stroke-width="2"/>
+    <path d="M285 -40 C345 250, 458 560, 540 850 C623 1140, 735 1300, 795 1390" stroke="url(#g2)" stroke-width="2"/>
+    <path d="M438 -40 C462 250, 507 560, 540 850 C573 1140, 618 1300, 642 1390" stroke="url(#g3)" stroke-width="2"/>
+    <path d="M642 -40 C618 250, 573 560, 540 850 C507 1140, 462 1300, 438 1390" stroke="url(#g4)" stroke-width="2"/>
+    <path d="M795 -40 C735 250, 623 560, 540 850 C458 1140, 345 1300, 285 1390" stroke="url(#g5)" stroke-width="2"/>
+    <path d="M948 -40 C852 250, 672 560, 540 850 C408 1140, 228 1300, 132 1390" stroke="url(#g6)" stroke-width="2"/>
     <defs>
-      <linearGradient id="g1" x1="540" y1="0" x2="540" y2="1350" gradientUnits="userSpaceOnUse"><stop stop-color="#00B4FF" stop-opacity="0"/><stop offset="0.5" stop-color="#00B4FF" stop-opacity="0.95"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0.05"/></linearGradient>
-      <linearGradient id="g2" x1="540" y1="0" x2="540" y2="1350" gradientUnits="userSpaceOnUse"><stop stop-color="#8b5cf6" stop-opacity="0"/><stop offset="0.5" stop-color="#8b5cf6" stop-opacity="0.95"/><stop offset="1" stop-color="#ec4899" stop-opacity="0.05"/></linearGradient>
-      <linearGradient id="g3" x1="540" y1="0" x2="540" y2="1350" gradientUnits="userSpaceOnUse"><stop stop-color="#ec4899" stop-opacity="0"/><stop offset="0.5" stop-color="#ec4899" stop-opacity="0.9"/><stop offset="1" stop-color="#f97316" stop-opacity="0.05"/></linearGradient>
-      <linearGradient id="g4" x1="540" y1="0" x2="540" y2="1350" gradientUnits="userSpaceOnUse"><stop stop-color="#10b981" stop-opacity="0"/><stop offset="0.5" stop-color="#10b981" stop-opacity="0.9"/><stop offset="1" stop-color="#0ea5e9" stop-opacity="0.05"/></linearGradient>
-      <linearGradient id="g5" x1="540" y1="0" x2="540" y2="1350" gradientUnits="userSpaceOnUse"><stop stop-color="#f97316" stop-opacity="0"/><stop offset="0.5" stop-color="#f97316" stop-opacity="0.85"/><stop offset="1" stop-color="#10b981" stop-opacity="0.05"/></linearGradient>
-      <linearGradient id="g6" x1="540" y1="0" x2="540" y2="1350" gradientUnits="userSpaceOnUse"><stop stop-color="#0ea5e9" stop-opacity="0"/><stop offset="0.5" stop-color="#0ea5e9" stop-opacity="0.9"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0.05"/></linearGradient>
+      <linearGradient id="g1" x1="540" y1="0" x2="540" y2="1350" gradientUnits="userSpaceOnUse"><stop stop-color="#00B4FF" stop-opacity="0"/><stop offset="0.5" stop-color="#00B4FF" stop-opacity="0.5"/><stop offset="1" stop-color="#00B4FF" stop-opacity="0"/></linearGradient>
+      <linearGradient id="g2" x1="540" y1="0" x2="540" y2="1350" gradientUnits="userSpaceOnUse"><stop stop-color="#8b5cf6" stop-opacity="0"/><stop offset="0.5" stop-color="#8b5cf6" stop-opacity="0.5"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></linearGradient>
+      <linearGradient id="g3" x1="540" y1="0" x2="540" y2="1350" gradientUnits="userSpaceOnUse"><stop stop-color="#ec4899" stop-opacity="0"/><stop offset="0.5" stop-color="#ec4899" stop-opacity="0.45"/><stop offset="1" stop-color="#ec4899" stop-opacity="0"/></linearGradient>
+      <linearGradient id="g4" x1="540" y1="0" x2="540" y2="1350" gradientUnits="userSpaceOnUse"><stop stop-color="#10b981" stop-opacity="0"/><stop offset="0.5" stop-color="#10b981" stop-opacity="0.45"/><stop offset="1" stop-color="#10b981" stop-opacity="0"/></linearGradient>
+      <linearGradient id="g5" x1="540" y1="0" x2="540" y2="1350" gradientUnits="userSpaceOnUse"><stop stop-color="#f97316" stop-opacity="0"/><stop offset="0.5" stop-color="#f97316" stop-opacity="0.4"/><stop offset="1" stop-color="#f97316" stop-opacity="0"/></linearGradient>
+      <linearGradient id="g6" x1="540" y1="0" x2="540" y2="1350" gradientUnits="userSpaceOnUse"><stop stop-color="#0ea5e9" stop-opacity="0"/><stop offset="0.5" stop-color="#0ea5e9" stop-opacity="0.45"/><stop offset="1" stop-color="#0ea5e9" stop-opacity="0"/></linearGradient>
     </defs>
   </svg>
-  <div class="veil" aria-hidden="true"></div>
 
   <div class="page">
     <header class="brand">
       <img class="mark" src="hg-mark.svg" alt="" />
-      <div class="wordmark">Holistic <em>Governance</em></div>
+      <div class="lockup">
+        <span class="product">HG <em>Intel</em></span>
+        <span class="by">by Holistic Governance</span>
+      </div>
     </header>
 
     <main>
@@ -191,7 +193,7 @@
           <p>Every update is checked by clinical-governance experts before it reaches you.</p>
         </div>
         <div class="card">
-          <div class="mono" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)">↗</div>
+          <div class="mono" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
           <h2>Built for the whole chain</h2>
           <p>Clinicians stay current, providers stay accountable, boards stay assured — plus an “ask a governance specialist” function for the hard questions.</p>
         </div>
