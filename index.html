@@ -53,8 +53,8 @@
     text-transform:uppercase;padding:11px 14px}
 
   /* ---- page frame ---- */
-  .page{position:relative;z-index:1;width:100%;max-width:1280px;margin:0 auto;
-    padding:44px clamp(28px,5vw,72px) 40px;display:flex;flex-direction:column;min-height:100vh;
+  .page{position:relative;z-index:1;width:100%;max-width:none;margin:0 auto;
+    padding:44px clamp(28px,5.5vw,120px) 40px;display:flex;flex-direction:column;min-height:100vh;
     align-items:stretch;text-align:left}
   .halo{text-shadow:0 0 6px #fff,0 0 14px #fff,0 0 26px #fff,0 0 40px #fff}
 
@@ -81,7 +81,7 @@
   h1 em{font-style:italic;color:var(--accent-lite)}
 
   .lead{font-size:clamp(17px,2.2vw,21px);color:var(--body);margin:26px 0 0;
-    max-width:74ch;line-height:1.65}
+    max-width:92ch;line-height:1.65}
   .lead strong{color:var(--ink);font-weight:600}
 
   /* ---- thread key (mirrors the app's ThreadKey) ---- */
@@ -165,13 +165,13 @@
 <body>
   <div class="topribbon">✦&nbsp;&nbsp;Coming soon — HG Intel launches 2027&nbsp;&nbsp;✦</div>
   <div class="glow" aria-hidden="true"></div>
-  <svg class="streams" viewBox="0 0 1080 1350" fill="none" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M132 -40 C228 280, 372 640, 463 940 C708 1130, 924 1300, 1032 1450" stroke="url(#g1)" stroke-width="2"/>
-    <path d="M285 -40 C345 280, 435 640, 492 940 C645 1130, 780 1300, 848 1450" stroke="url(#g2)" stroke-width="2"/>
-    <path d="M438 -40 C462 280, 498 640, 521 940 C582 1130, 636 1300, 663 1450" stroke="url(#g3)" stroke-width="2"/>
-    <path d="M642 -40 C618 280, 582 640, 559 940 C498 1130, 444 1300, 417 1450" stroke="url(#g4)" stroke-width="2"/>
-    <path d="M795 -40 C735 280, 645 640, 588 940 C435 1130, 300 1300, 233 1450" stroke="url(#g5)" stroke-width="2"/>
-    <path d="M948 -40 C852 280, 708 640, 617 940 C372 1130, 156 1300, 48 1450" stroke="url(#g6)" stroke-width="2"/>
+  <svg class="streams" viewBox="0 0 1080 1350" fill="none" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path d="M132 -40 C228 280, 372 640, 463 940 C708 1130, 924 1300, 1032 1450" stroke="url(#g1)" stroke-width="1.5"/>
+    <path d="M285 -40 C345 280, 435 640, 492 940 C645 1130, 780 1300, 848 1450" stroke="url(#g2)" stroke-width="1.5"/>
+    <path d="M438 -40 C462 280, 498 640, 521 940 C582 1130, 636 1300, 663 1450" stroke="url(#g3)" stroke-width="1.5"/>
+    <path d="M642 -40 C618 280, 582 640, 559 940 C498 1130, 444 1300, 417 1450" stroke="url(#g4)" stroke-width="1.5"/>
+    <path d="M795 -40 C735 280, 645 640, 588 940 C435 1130, 300 1300, 233 1450" stroke="url(#g5)" stroke-width="1.5"/>
+    <path d="M948 -40 C852 280, 708 640, 617 940 C372 1130, 156 1300, 48 1450" stroke="url(#g6)" stroke-width="1.5"/>
     <defs>
       <linearGradient id="g1" x1="540" y1="0" x2="540" y2="1460" gradientUnits="userSpaceOnUse"><stop stop-color="#00B4FF" stop-opacity="0"/><stop offset="0.36" stop-color="#00B4FF" stop-opacity="0.36"/><stop offset="0.9" stop-color="#00B4FF" stop-opacity="0.2"/><stop offset="1" stop-color="#00B4FF" stop-opacity="0"/></linearGradient>
       <linearGradient id="g2" x1="540" y1="0" x2="540" y2="1460" gradientUnits="userSpaceOnUse"><stop stop-color="#8b5cf6" stop-opacity="0"/><stop offset="0.36" stop-color="#8b5cf6" stop-opacity="0.36"/><stop offset="0.9" stop-color="#8b5cf6" stop-opacity="0.2"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></linearGradient>
