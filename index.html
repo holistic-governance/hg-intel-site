@@ -53,8 +53,8 @@
     text-transform:uppercase;padding:11px 14px}
 
   /* ---- page frame ---- */
-  .page{position:relative;z-index:1;width:100%;max-width:960px;margin:0 auto;
-    padding:44px 28px 40px;display:flex;flex-direction:column;min-height:100vh;
+  .page{position:relative;z-index:1;width:100%;max-width:1280px;margin:0 auto;
+    padding:44px clamp(28px,5vw,72px) 40px;display:flex;flex-direction:column;min-height:100vh;
     align-items:stretch;text-align:left}
   .halo{text-shadow:0 0 6px #fff,0 0 14px #fff,0 0 26px #fff,0 0 40px #fff}
 
@@ -77,11 +77,11 @@
     border-radius:2px;background:linear-gradient(90deg,var(--bright),var(--cyber))}
 
   h1{font-family:var(--serif);font-weight:400;line-height:1.12;letter-spacing:-.005em;
-    font-size:clamp(28px,4.3vw,48px);margin:24px 0 0;max-width:none}
+    font-size:clamp(28px,4.3vw,52px);margin:24px 0 0;max-width:none;text-wrap:balance}
   h1 em{font-style:italic;color:var(--accent-lite)}
 
   .lead{font-size:clamp(17px,2.2vw,21px);color:var(--body);margin:26px 0 0;
-    max-width:60ch;line-height:1.65}
+    max-width:74ch;line-height:1.65}
   .lead strong{color:var(--ink);font-weight:600}
 
   /* ---- thread key (mirrors the app's ThreadKey) ---- */
