@@ -13,27 +13,35 @@
 <link rel="icon" href="favicon.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
   :root{ --ink:#0f172a; --bright:#00B4FF; --accent-text:#0499D9; --soft:#64748b; }
   *{ margin:0; padding:0; box-sizing:border-box; }
   body{ min-height:100vh; display:flex; align-items:center; justify-content:center;
         background:#ffffff; color:var(--ink); font-family:'Inter',sans-serif; text-align:center; padding:2rem; }
   main{ display:flex; flex-direction:column; align-items:center; gap:1.4rem; }
-  img.mark{ width:140px; height:140px; }
-  h1{ font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(2.2rem,6vw,3.2rem); letter-spacing:0.01em; }
-  .tag{ font-size:1.05rem; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--accent-text); }
+  .lockup{ display:flex; align-items:center; justify-content:center; gap:1.2rem; }
+  img.mark{ height:clamp(5rem,15.5vw,9rem); width:auto; }
+  h1{ font-family:'Jost',sans-serif; font-weight:400; font-size:clamp(4.4rem,14vw,8rem); letter-spacing:0.01em; color:var(--bright); }
+  .tag{ font-size:clamp(1.3rem,3vw,1.6rem); font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--bright); margin-bottom:1rem; }
   .by{ font-size:0.85rem; color:var(--soft); }
   a{ color:var(--accent-text); text-decoration:none; border-bottom:1px solid rgba(4,153,217,0.35); padding-bottom:1px; }
+  a.cta{ display:inline-block; background:var(--bright); color:#ffffff; border:none; border-radius:999px;
+         padding:0.95rem 2.4rem; font-size:1.05rem; font-weight:600; letter-spacing:0.01em;
+         box-shadow:0 6px 18px rgba(0,180,255,0.35); transition:background .15s ease, transform .15s ease; margin-top:0.4rem; }
+  a.cta:hover{ background:var(--accent-text); transform:translateY(-1px); }
+  a.cta:focus-visible{ outline:3px solid var(--accent-text); outline-offset:3px; }
 </style>
 </head>
 <body>
 <main>
-  <img class="mark" src="hg-mark.svg" alt="" aria-hidden="true" />
   <div class="tag">Coming 2027</div>
-  <h1>HG Intel</h1>
+  <div class="lockup">
+    <img class="mark" src="hg-mark.svg" alt="HG" />
+    <h1>Intel</h1>
+  </div>
   <p class="by">A <a href="https://hg-au.com/">Holistic Governance</a> product.</p>
-  <p class="by"><a href="https://hg-au.com/ai-technology.html#hg-intel">Register your interest</a></p>
+  <a class="cta" href="https://hg-au.com/ai-technology.html#hg-intel">Register your interest</a>
   <p class="by">Enquiries: <a href="mailto:info@hg-au.com?subject=HG%20Intel">info@hg-au.com</a></p>
 </main>
 </body>
