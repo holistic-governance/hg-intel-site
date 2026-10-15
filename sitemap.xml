@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://hg-intel.com.au/</loc>
-    <lastmod>2026-09-04</lastmod>
-  </url>
-  <url>
-    <loc>https://hg-intel.com.au/privacy.html</loc>
-    <lastmod>2026-10-16</lastmod>
-  </url>
-  <url>
-    <loc>https://hg-intel.com.au/terms.html</loc>
-    <lastmod>2026-10-16</lastmod>
-  </url>
+  <url><loc>https://hg-intel.com.au/</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://hg-intel.com.au/about.html</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://hg-intel.com.au/news.html</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://hg-intel.com.au/news-dhf27.html</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://hg-intel.com.au/privacy.html</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://hg-intel.com.au/terms.html</loc><lastmod>2026-10-16</lastmod></url>
 </urlset>

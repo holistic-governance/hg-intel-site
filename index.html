@@ -3,59 +3,329 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>HG Intel: coming 2027</title>
-<meta name="description" content="HG Intel: regulatory intelligence for Australian health care providers, from Holistic Governance. Launching 2027. Register your interest to be first to know." />
+<title>HG Intel: governance intelligence for health and care</title>
+<meta name="description" content="HG Intel is a governance intelligence platform for Australian health and care providers. It tracks regulatory and best practice change, reviews it, and maps it to the standards you are assessed against. A product of Holistic Governance Pty Ltd." />
 <link rel="canonical" href="https://hg-intel.com.au/" />
-<meta property="og:title" content="HG Intel: coming 2027" />
-<meta property="og:description" content="Regulatory intelligence for Australian health care providers, launching 2027." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="HG Intel: governance intelligence for health and care" />
+<meta property="og:description" content="Regulatory and best practice change, tracked and mapped to the standards you are assessed against. Every source curated by a Registered Nurse." />
 <meta property="og:url" content="https://hg-intel.com.au/" />
+<meta name="twitter:card" content="summary" />
 <meta name="theme-color" content="#00B4FF" />
 <link rel="icon" href="favicon.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
 <style>
-  :root{ --ink:#0f172a; --bright:#00B4FF; --accent-text:#0499D9; --soft:#64748b; }
-  *{ margin:0; padding:0; box-sizing:border-box; }
-  body{ min-height:100vh; display:flex; align-items:center; justify-content:center;
-        background:#ffffff; color:var(--ink); font-family:'Inter',sans-serif; text-align:center; padding:2rem; }
-  main{ display:flex; flex-direction:column; align-items:center; gap:1.4rem; }
-  .lockup{ display:flex; align-items:center; justify-content:center; gap:1.2rem; }
-  img.mark{ height:clamp(5rem,15.5vw,9rem); width:auto; }
-  h1{ font-family:'Jost',sans-serif; font-weight:400; font-size:clamp(4.4rem,14vw,8rem); letter-spacing:0.01em; color:var(--bright); }
-  .tag{ font-size:clamp(1.3rem,3vw,1.6rem); font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--bright); margin-bottom:1rem; }
-  .by{ font-size:0.85rem; color:var(--soft); }
-  a{ color:var(--accent-text); text-decoration:none; border-bottom:1px solid rgba(4,153,217,0.35); padding-bottom:1px; }
-  a.cta{ display:inline-block; background:var(--bright); color:#ffffff; border:none; border-radius:999px;
-         padding:0.95rem 2.4rem; font-size:1.05rem; font-weight:600; letter-spacing:0.01em;
-         box-shadow:0 6px 18px rgba(0,180,255,0.35); transition:background .15s ease, transform .15s ease; margin-top:0.4rem; }
-  a.cta:hover{ background:var(--accent-text); transform:translateY(-1px); }
-  a.cta:focus-visible{ outline:3px solid var(--accent-text); outline-offset:3px; }
-  p.lead{ max-width:40rem; font-size:clamp(1rem,2.4vw,1.15rem); line-height:1.6; color:var(--ink); }
-  a.ghost{ display:inline-block; background:#ffffff; color:var(--accent-text); border:1.5px solid rgba(4,153,217,0.45); border-radius:999px;
-           padding:0.85rem 2.1rem; font-size:1rem; font-weight:600; letter-spacing:0.01em;
-           transition:border-color .15s ease, transform .15s ease; }
-  a.ghost:hover{ border-color:var(--accent-text); transform:translateY(-1px); }
-  a.ghost:focus-visible{ outline:3px solid var(--accent-text); outline-offset:3px; }
-  .legal{ margin-top:1.2rem; font-size:0.8rem; }
-  .ctas{ display:flex; flex-wrap:wrap; gap:0.9rem; justify-content:center; margin-top:0.4rem; }
+.bg{height:1150px}
+.hero main{position:relative;isolation:isolate}
+.pool{position:absolute;inset:-30px -70px -20px -70px;z-index:0;pointer-events:none;
+  background:radial-gradient(58% 68% at 34% 52%,#fff 0%,rgba(255,255,255,.93) 46%,rgba(255,255,255,0) 80%)}
+.hero main > *{position:relative;z-index:1}
+.hero h1,.hero .lead,.hero .kicker,.hero .trust{text-shadow:0 0 8px #fff,0 0 20px #fff}
+#stage h2,#stage .sub,#stage .eyebrow{text-shadow:0 0 8px #fff,0 0 20px #fff}
+
+.threadkey{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;margin-top:22px;font-size:12.5px;color:var(--body)}
+.threadkey span{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
+.threadkey i{width:22px;height:3px;border-radius:2px;display:inline-block;margin-right:6px;vertical-align:middle}
 </style>
 </head>
 <body>
+<div class="bg" aria-hidden="true"><svg viewBox="0 0 1000 1000" preserveAspectRatio="none" fill="none" stroke-width="1.4">
+<path class="w" d="M 164 -40 C 248 250, 392 560, 500 780 C 608 980, 752 1000, 836 1060" stroke="url(#vd0)" vector-effect="non-scaling-stroke"/>
+<path class="w" d="M 332 -40 C 374 250, 446 560, 500 780 C 554 980, 626 1000, 668 1060" stroke="url(#vd1)" vector-effect="non-scaling-stroke"/>
+<path class="w" d="M 500 -40 C 500 250, 500 560, 500 780 C 500 980, 500 1000, 500 1060" stroke="url(#vd2)" vector-effect="non-scaling-stroke"/>
+<path class="w" d="M 668 -40 C 626 250, 554 560, 500 780 C 446 980, 374 1000, 332 1060" stroke="url(#vd3)" vector-effect="non-scaling-stroke"/>
+<path class="w" d="M 836 -40 C 752 250, 608 560, 500 780 C 392 980, 248 1000, 164 1060" stroke="url(#vd4)" vector-effect="non-scaling-stroke"/>
+<defs>
+<linearGradient id="vd0" x1="0" y1="0" x2="0" y2="1000" gradientUnits="userSpaceOnUse"><stop stop-color="#00B4FF" stop-opacity="0.04"/><stop offset="0.5" stop-color="#00B4FF" stop-opacity="0.4"/><stop offset="1" stop-color="#00B4FF" stop-opacity="0.04"/></linearGradient>
+<linearGradient id="vd1" x1="0" y1="0" x2="0" y2="1000" gradientUnits="userSpaceOnUse"><stop stop-color="#10b981" stop-opacity="0.04"/><stop offset="0.5" stop-color="#10b981" stop-opacity="0.4"/><stop offset="1" stop-color="#10b981" stop-opacity="0.04"/></linearGradient>
+<linearGradient id="vd2" x1="0" y1="0" x2="0" y2="1000" gradientUnits="userSpaceOnUse"><stop stop-color="#8b5cf6" stop-opacity="0.04"/><stop offset="0.5" stop-color="#8b5cf6" stop-opacity="0.4"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0.04"/></linearGradient>
+<linearGradient id="vd3" x1="0" y1="0" x2="0" y2="1000" gradientUnits="userSpaceOnUse"><stop stop-color="#ec4899" stop-opacity="0.04"/><stop offset="0.5" stop-color="#ec4899" stop-opacity="0.4"/><stop offset="1" stop-color="#ec4899" stop-opacity="0.04"/></linearGradient>
+<linearGradient id="vd4" x1="0" y1="0" x2="0" y2="1000" gradientUnits="userSpaceOnUse"><stop stop-color="#f97316" stop-opacity="0.04"/><stop offset="0.5" stop-color="#f97316" stop-opacity="0.4"/><stop offset="1" stop-color="#f97316" stop-opacity="0.04"/></linearGradient>
+</defs>
+</svg></div>
+<div class="hero">
+<div class="glow" aria-hidden="true"></div>
+<div class="wrap">
+<header class="topbar">
+<a class="brand" href="index.html">
+<span class="wordmark"><img class="mark" src="hg-mark.svg" alt="HG" /><span class="product">Intel</span></span>
+<span class="by">by Holistic Governance</span>
+</a>
+<nav class="topnav">
+<a href="index.html" class="here">Product</a>
+<a href="#partners">Partners</a>
+<a href="#coverage">Coverage</a>
+<a href="news.html">News</a>
+<a href="about.html">About us</a>
+<a href="#register">Register interest</a>
+</nav>
+<span class="topcta">Private build &middot; beta 2027</span>
+</header>
 <main>
-  <div class="tag">Coming 2027</div>
-  <div class="lockup">
-    <img class="mark" src="hg-mark.svg" alt="HG" />
-    <h1>Intel</h1>
-  </div>
-  <p class="lead">Regulatory intelligence for Australian health care providers.<br />HG Intel watches the regulators, legislation and best practice so you do not have to: AI speed with clinical judgement.</p>
-  <p class="by">A <a href="https://hg-au.com/">Holistic Governance</a> product.</p>
-  <div class="ctas">
-    <a class="cta" href="https://hg-au.com/ai-technology.html#hg-intel">Register your interest</a>
-    <a class="ghost" href="https://hg-au.com/assurance-briefing.html">Assurance Briefing</a>
-  </div>
-  <p class="by">Enquiries: <a href="mailto:info@hg-intel.com.au?subject=HG%20Intel">info@hg-intel.com.au</a></p>
-  <p class="by legal"><a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms of Service</a> &middot; &copy; 2026 Holistic Governance Pty Ltd</p>
+<div class="pool" aria-hidden="true"></div>
+<p class="kicker" style="margin-top:56px">Governance intelligence platform</p>
+<h1>Every regulatory change that matters, <span>found, reviewed and mapped.</span></h1>
+<p class="lead">HG Intel is a software platform for Australian health and care providers. It tracks regulatory and best practice change across a curated registry of Australian sources, puts every source through a Registered Nurse review checkpoint, and maps what changed to <strong>the standards you are assessed against</strong>.</p>
+<div class="cta">
+<a class="pill" href="#register">Register your interest</a>
+<a class="ghost" href="about.html">Meet the team</a>
+</div>
+<div class="trust">
+<span class="strong">AU-hosted application and database</span>
+<span>Linked to its source</span>
+<span>Every source RN-curated</span>
+<span>Decision support, not decision making</span>
+</div>
+<div class="threadkey"><span>Threads</span><i style="background:#00B4FF"></i>Regulatory<i style="background:#10b981"></i>Clinical<i style="background:#8b5cf6"></i>Evidence<i style="background:#ec4899"></i>Privacy<i style="background:#f97316"></i>Funding</div>
 </main>
+</div>
+</div>
+
+<div class="wrap">
+
+<section id="capabilities">
+<p class="eyebrow">What it does</p>
+<h2>The capabilities, in plain terms.</h2>
+<p class="sub">What a provider organisation gets from HG Intel, without the plumbing.</p>
+<ul class="feat plain">
+<li>
+<h3>Continuous source monitoring</h3>
+<p>A curated registry of Australian regulators, standards bodies, peak bodies and the evidence base, checked on a regular schedule rather than when someone remembers.</p>
+</li>
+<li>
+<h3>Change detection</h3>
+<p>Changes are picked up from the source itself, so a quiet edit to a page nobody announced is still caught.</p>
+</li>
+<li>
+<h3>Registered Nurse review</h3>
+<p>Every source passes a Registered Nurse checkpoint before anything from it reaches a customer. AI-assisted content is reviewed by a human before it publishes, and it is labelled.</p>
+</li>
+<li>
+<h3>Classified for your setting</h3>
+<p>Sources are tagged by the care settings and areas of practice they apply to, so a hospital group and a home care provider do not receive the same undifferentiated list.</p>
+</li>
+<li>
+<h3>Mapped to your standards</h3>
+<p>Change is mapped to the standards and obligations your organisation is actually assessed against, rather than left as a pile of links to interpret.</p>
+</li>
+<li>
+<h3>Linked to its source</h3>
+<p>Every item links to its source document, so you can verify rather than trust.</p>
+</li>
+<li>
+<h3>A record you can use</h3>
+<p>Acknowledgements and an evidence trail your organisation can take into an assessment or straight into a board paper.</p>
+</li>
+</ul>
+</section>
+
+<section id="stage">
+<p class="eyebrow">Current stage of development</p>
+<h2>A working private build.</h2>
+<p class="sub">HG Intel is in private build today and opens to a small group of provider organisations before general release in 2027. We would rather be precise about where we are than impressive about it.</p>
+</section>
+
+<section id="partners">
+<p class="eyebrow">Founding Design Partners</p>
+<h2>Shape it before anyone else uses it.</h2>
+<p class="sub">HG Intel opens to a small founding cohort of Australian providers who put it to work inside their own governance before general release. We are recruiting now.</p>
+
+<p class="pilotwhen"><b>Pilot runs in early 2027</b><span>Applications open now</span></p>
+
+<p class="eyebrow" style="margin-top:38px">Who we are looking for</p>
+<div class="chips">
+<span class="chip"><i style="background:#00B4FF"></i>Hospitals</span>
+<span class="chip"><i style="background:#8b5cf6"></i>Day theatres</span>
+<span class="chip"><i style="background:#10b981"></i>Support at home providers</span>
+<span class="chip"><i style="background:#ec4899"></i>NDIS providers</span>
+<span class="chip"><i style="background:#f97316"></i>Aged care providers</span>
+</div>
+
+<div class="cards" style="margin-top:34px">
+<div class="card">
+<p class="num">What you get</p>
+<h3>The product, early</h3>
+<p>Full access through the pilot, used on your own obligations and your own assessment cycle rather than a demo dataset.</p>
+</div>
+<div class="card">
+<p class="num">What you change</p>
+<h3>A say in what gets built</h3>
+<p>Founding partners decide what earns its place and what gets cut. If it does not help the person doing the job at eight in the morning, we would rather hear it now.</p>
+</div>
+<div class="card">
+<p class="num">What we ask</p>
+<h3>Candour, and a little time</h3>
+<p>A short session each fortnight and honest feedback. No obligation to buy, and nothing about your organisation is published without your written consent.</p>
+</div>
+</div>
+
+<div class="cta" style="margin-top:34px">
+<a class="pill" href="#register">Apply to be a founding partner</a>
+<a class="ghost" href="mailto:info@hg-intel.com.au?subject=HG%20Intel%20Founding%20Design%20Partner">Talk to our founder</a>
+</div>
+</section>
+
+<section id="who">
+<p class="eyebrow">Who it is for</p>
+<h2>The people who carry the compliance load.</h2>
+<div class="rows">
+<div class="row">
+<h3>Quality and governance leads</h3>
+<p>The daily user. What changed, what it touches, and what to do about it, without opening twelve regulator sites to find out.</p>
+</div>
+<div class="row">
+<h3>Nurses and clinical educators</h3>
+<p>Current, traceable material for CPD, staff briefings and audit preparation.</p>
+</div>
+<div class="row">
+<h3>Boards and directors</h3>
+<p>Assurance that change is being watched and acted on, in a form that goes straight into a board paper.</p>
+</div>
+</div>
+</section>
+
+<section id="sectors">
+<p class="eyebrow">Sectors</p>
+<h2>Built for health and care, not one corner of it.</h2>
+<p class="sub">Most tools in this space cover a single sector. HG Intel covers the settings a real provider group actually operates across.</p>
+<div class="chips">
+<span class="chip"><i style="background:#00B4FF"></i>Hospital</span>
+<span class="chip"><i style="background:#10b981"></i>Aged care</span>
+<span class="chip"><i style="background:#8b5cf6"></i>Support at home</span>
+<span class="chip"><i style="background:#ec4899"></i>Respite</span>
+<span class="chip"><i style="background:#f97316"></i>Manufacturing</span>
+<span class="chip"><i style="background:#0ea5e9"></i>Education</span>
+</div>
+</section>
+
+<section id="coverage">
+<p class="eyebrow">Coverage</p>
+<h2>What we watch.</h2>
+<p class="sub">The registry itself is the work of years, so we do not publish it. What we will say is what kind of source goes in it, and which areas of practice it covers.</p>
+<div class="srcs">
+<div class="src">
+<h3>Regulators and government</h3>
+<p>Commonwealth and state regulators, departments and commissions whose decisions create obligations for providers.</p>
+</div>
+<div class="src">
+<h3>Standards and accreditation</h3>
+<p>The standards bodies and accreditation schemes your organisation is actually assessed against, and the guidance issued alongside them.</p>
+</div>
+<div class="src">
+<h3>Peak bodies</h3>
+<p>Peak bodies and safety organisations, whose position statements shape what good practice is taken to mean.</p>
+</div>
+<div class="src">
+<h3>The evidence base</h3>
+<p>Clinical guidelines, coronial and inquiry findings, and the research that moves practice ahead of the rules catching up.</p>
+</div>
+</div>
+<p class="eyebrow" style="margin-top:44px">Areas of practice covered</p>
+<div class="areas">
+<span class="area">Wound care</span>
+<span class="area">Medication safety</span>
+<span class="area">Falls</span>
+<span class="area">Infection prevention</span>
+<span class="area">Dementia care</span>
+<span class="area">Palliative care</span>
+<span class="area">Nutrition</span>
+<span class="area">Continence</span>
+<span class="area">Nursing practice</span>
+<span class="area">Hospital</span>
+<span class="area">Aged care</span>
+<span class="area">Community and home care</span>
+<span class="area">Respite</span>
+<span class="area">NDIS and disability</span>
+<span class="area">Medical devices</span>
+<span class="area">Work health and safety</span>
+<span class="area">AI and technology</span>
+<span class="area more">and more</span>
+</div>
+<p class="note">Areas of practice are the content taxonomy inside the product. They are not the same thing as the sectors listed above, which describe who HG Intel is built for. The registry keeps growing, and every addition passes the same Registered Nurse checkpoint as the ones already in it.</p>
+</section>
+
+<section id="security">
+<p class="eyebrow">Security and assurance</p>
+<h2>Where your data sits, and what we will not do with it.</h2>
+<div class="cards">
+<div class="card">
+<p class="num">Hosting</p>
+<h3>Australian hosted</h3>
+<p>The application and its database are hosted in Australia, in Google Cloud's Sydney region. Supporting services are disclosed in the <a href="privacy.html">privacy notice</a>.</p>
+</div>
+<div class="card">
+<p class="num">Your data</p>
+<h3>Not training material</h3>
+<p>Your mappings and your usage are yours. We do not train models on them and we do not sell them. They are shared only with the service providers listed in our <a href="privacy.html">privacy policy</a>.</p>
+</div>
+<div class="card">
+<p class="num">Assurance</p>
+<h3>Reviewed, cited, and not advice</h3>
+<p>Every source passes a Registered Nurse checkpoint, every item links to its source, and HG Intel is decision support. A qualified human decides.</p>
+</div>
+</div>
+</section>
+
+<section id="register">
+<div class="close">
+<h2>Be first in the door.</h2>
+<p>HG Intel opens to a small group of providers first, so the people who shape it are the people who use it every day. Leave your email and we will be in touch before general release.</p>
+<form class="signup" onsubmit="registerInterest(event)">
+<label for="email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Email address</label>
+<input id="email" name="email" type="email" required placeholder="you@yourprovider.com.au" autocomplete="email" />
+<button type="submit">Register interest</button>
+</form>
+<p class="formmsg" id="formmsg" role="status"></p>
+<p class="formnote">We use your email only to contact you about HG Intel. No list sharing, no onward marketing. See the <a href="privacy.html">privacy notice</a>.</p>
+</div>
+</section>
+
+<footer>
+<span class="disclaimer">
+HG Intel is a product of Holistic Governance Pty Ltd (ABN 52 698 725 558), Melbourne, Australia.
+It provides decision support, not legal, medical or clinical advice. The application and database
+are hosted in Australia (Sydney); sub-processors are disclosed in the privacy notice.
+<span class="flinks">
+<a href="about.html">About us</a>
+<a href="news.html">News</a>
+<a href="privacy.html">Privacy</a>
+<a href="terms.html">Terms</a>
+<a href="mailto:info@hg-intel.com.au?subject=HG%20Intel%20enquiry">info@hg-intel.com.au</a>
+<a href="https://www.linkedin.com/company/hg-au/">LinkedIn</a>
+<a href="https://hg-au.com/">Holistic Governance</a>
+</span>
+</span>
+<span class="sig"><img src="hg-mark.svg" alt="HG" /><span>Intel</span></span>
+</footer>
+</div>
+
+<script>
+function registerInterest(e){
+  e.preventDefault();
+  var form = e.target;
+  var btn = form.querySelector('button');
+  var msg = document.getElementById('formmsg');
+  var email = document.getElementById('email').value.trim();
+  btn.disabled = true;
+  msg.textContent = 'Sending...';
+  fetch('https://app.hg-au.com/api/subscribe', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, source: 'hg-intel-site' })
+  }).then(function(res){
+    if (!res.ok) { throw new Error(res.status); }
+    msg.textContent = 'Thanks. We will be in touch before general release.';
+    form.reset();
+  }).catch(function(){
+    msg.innerHTML = 'That did not go through. Please email ' +
+      '<a href="mailto:info@hg-intel.com.au?subject=HG%20Intel">info@hg-intel.com.au</a> and we will add you.';
+  }).then(function(){
+    btn.disabled = false;
+  });
+}
+</script>
 </body>
 </html>
