@@ -314,7 +314,7 @@ function registerInterest(e){
   fetch('https://app.hg-au.com/api/subscribe', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email: email, source: 'hg-intel-site' })
+    body: JSON.stringify({ email: email, source: 'hg-intel' })
   }).then(function(res){
     if (!res.ok) { throw new Error(res.status); }
     msg.textContent = 'Thanks. We will be in touch before general release.';
