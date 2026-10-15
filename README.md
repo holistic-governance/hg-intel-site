@@ -27,7 +27,7 @@ GitHub Pages rebuilds automatically (~1 min).
 
 ## Copy guardrails
 Decision **support**, not legal/medical/clinical advice (carries the disclaimer). Names aged-care's
-reset + **upcoming** NSQHS Standards — no fabricated dates. "Register your interest" → `info@hg-au.com`.
+reset + **upcoming** NSQHS Standards — no fabricated dates. Enquiries → `info@hg-intel.com.au`. `privacy.html` + `terms.html` (shared `legal.css`) back the Google developer/OAuth verification.
 
 ## Regenerate the preview (optional)
 ```
