@@ -564,3 +564,10 @@
   .status .dhf-link{margin-top:12px}
   @media(max-width:900px){.hsplit{grid-template-columns:1fr;gap:28px;margin-top:36px}}
   @media(max-width:560px){.hero h1{font-size:26px}.trustline{font-size:13px}}
+
+  /* nav as pills (16 Oct): soft blue pills, current page filled */
+  .topnav{gap:8px}
+  .topnav a{padding:8px 16px;border:1px solid rgba(0,180,255,.3);border-radius:999px;background:rgba(255,255,255,.75);color:var(--accent-text)}
+  .topnav a:hover{background:#fff;border-color:var(--bright);color:var(--accent-text)}
+  .topnav a.here{background:var(--bright);border-color:var(--bright);color:#fff}
+  @media(max-width:620px){.topnav{gap:4px;flex-wrap:nowrap}.topnav a{padding:6px 9px;font-size:12px;white-space:nowrap}}
