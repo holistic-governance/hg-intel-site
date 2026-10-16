@@ -472,3 +472,6 @@
   /* no decorative rules: lime line under the logo, blue line before Read more */
   .newsbanner .card .sub::before,.newscard .shot .card .sub::before{display:none}
   .newsbanner .card .sub,.newscard .shot .card .sub{margin-top:12px}
+
+  /* plain subheading that replaced the small-caps labels above chip lists */
+  .subhead{font-family:var(--display);font-weight:500;font-size:20px;color:var(--ink)}
