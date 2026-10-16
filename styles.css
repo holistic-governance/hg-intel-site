@@ -554,3 +554,8 @@
   }
   @media(max-width:560px){h1{text-wrap:wrap}}
   @media(max-width:620px){.phase{margin-top:24px}.topbar{row-gap:8px}.topnav{gap:2px 14px}}
+
+  /* nav: all links in core blue, thin underline on the current page (option 1, 16 Oct) */
+  .topnav a{color:var(--bright);padding-bottom:4px;border-bottom:2px solid transparent;text-decoration:none}
+  .topnav a:hover{color:var(--accent-text);border-bottom-color:rgba(0,180,255,.4);text-decoration:none}
+  .topnav a.here{color:var(--bright);border-bottom-color:var(--bright)}
