@@ -86,7 +86,7 @@
   section{padding:clamp(56px,7vw,92px) 0 0}
   .eyebrow{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--soft)}
   h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,3.4vw,38px);line-height:1.18;
-    margin:14px 0 0;max-width:24ch;text-wrap:balance}
+    margin:14px 0 0;text-wrap:balance}
   .sub{font-size:16.5px;color:var(--body);margin-top:14px;max-width:62ch}
 
   .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:34px}
@@ -134,7 +134,7 @@
   /* closing CTA */
   .close{margin:0;background:linear-gradient(135deg,#0577C7,#00B4FF);
     border-radius:26px;padding:clamp(32px,5vw,56px);color:#fff}
-  .close h2{color:#fff;max-width:20ch}
+  .close h2{color:#fff}
   .close p{font-size:16.5px;color:rgba(255,255,255,.92);margin-top:14px;max-width:56ch}
   .close .pill{background:#fff;color:var(--cyber);box-shadow:0 14px 34px -16px rgba(0,0,0,.45)}
   .close .pill:hover{background:#eaf7fd}
@@ -296,7 +296,7 @@
 
   .article{margin-top:40px;max-width:72ch}
   .article h2{font-family:var(--display);font-weight:400;font-size:clamp(28px,3.8vw,42px);
-    line-height:1.14;color:var(--ink);max-width:22ch}
+    line-height:1.14;color:var(--ink)}
   .article .stamp{display:inline-flex;align-items:center;gap:9px;margin-top:18px;font-size:12.5px;
     font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text)}
   .article .stamp i{width:13px;height:13px;border-radius:3px;background:var(--bright);display:inline-block}
@@ -343,9 +343,7 @@
   .newscard .dek{font-size:17px;color:var(--body);line-height:1.6;margin-top:14px;max-width:52ch}
   .newscard .more{display:inline-flex;align-items:center;gap:16px;margin-top:24px;
     font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
-  .newscard .more::before{content:"";width:34px;height:4px;border-radius:2px;background:var(--bright);flex:none}
   .newscard .more:hover{color:var(--cyber);text-decoration:none}
-  .newscard .more:hover::before{background:var(--cyber)}
   @media(max-width:700px){ .newscard .shot{grid-template-columns:1fr} .newscard .shot .br{max-width:280px} }
 
   .backlink{display:inline-flex;align-items:center;gap:9px;margin-top:40px;font-size:14px;
@@ -454,3 +452,23 @@
     background:var(--wash);border:1px solid var(--line);border-radius:14px;padding:14px 22px}
   .pilotwhen b{font-family:var(--display);font-weight:500;font-size:19px;color:var(--ink)}
   .pilotwhen span{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text)}
+
+  /* DHF27 pod on the banner logo card, and the home-page event strip */
+  .newsbanner .card .pod,.newscard .shot .card .pod{display:inline-block;margin-top:14px;padding:6px 14px;border-radius:999px;
+    background:var(--dhf-lime);color:#0f172a;font-family:'Anton',var(--sans),sans-serif;font-weight:400;
+    font-size:13px;letter-spacing:.1em;text-transform:uppercase;line-height:1.2}
+  .eventstrip{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;margin-top:clamp(40px,5vw,64px);
+    padding:18px 26px;border-radius:20px;border:none;text-decoration:none;color:#fff;
+    background:linear-gradient(135deg,#0B4F9C,#0577C7 55%,#00B4FF);box-shadow:0 18px 44px -22px rgba(10,40,80,.55)}
+  .eventstrip .es-when{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.85)}
+  .eventstrip .es-meet{font-family:var(--display);font-size:22px;font-weight:500}
+  .eventstrip .es-meet em{font-style:normal;font-family:'Anton',var(--display),sans-serif;font-weight:400;color:var(--dhf-lime);letter-spacing:.02em}
+  .eventstrip .es-pod{background:var(--dhf-lime);color:#0f172a;border-radius:999px;padding:6px 14px;
+    font-family:'Anton',var(--sans),sans-serif;font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+  .eventstrip .es-go{margin-left:auto;font-weight:600;font-size:14.5px}
+  .eventstrip:hover .es-go{text-decoration:underline}
+  @media(max-width:700px){ .eventstrip .es-go{margin-left:0} }
+
+  /* no decorative rules: lime line under the logo, blue line before Read more */
+  .newsbanner .card .sub::before,.newscard .shot .card .sub::before{display:none}
+  .newsbanner .card .sub,.newscard .shot .card .sub{margin-top:12px}
