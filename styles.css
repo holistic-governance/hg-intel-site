@@ -59,6 +59,7 @@
   h1{font-family:var(--display);font-weight:400;line-height:1.1;letter-spacing:-.005em;
     font-size:clamp(32px,5vw,58px);margin:26px 0 0;max-width:20ch;text-wrap:balance}
   h1 span{color:var(--bright)}
+  @media(min-width:561px){h1.wide,.hero h1.wide{max-width:none}}
   .lead{font-size:clamp(17px,2.1vw,21px);color:var(--body);margin:24px 0 0;line-height:1.6}
   .lead strong{color:var(--ink);font-weight:600}
 
