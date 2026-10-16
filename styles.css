@@ -442,18 +442,6 @@
   .newsbanner .card .pod,.newscard .shot .card .pod{display:inline-block;margin-top:14px;padding:6px 14px;border-radius:999px;
     background:var(--dhf-lime);color:#0f172a;font-family:'Anton',var(--sans),sans-serif;font-weight:400;
     font-size:13px;letter-spacing:.1em;text-transform:uppercase;line-height:1.2}
-  .eventstrip{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;margin-top:clamp(40px,5vw,64px);
-    padding:16px 24px;border-radius:18px;border:1px solid var(--line);text-decoration:none;color:var(--ink);
-    background:#fff;box-shadow:0 14px 40px -24px rgba(10,40,80,.35);transition:border-color .15s ease}
-  .eventstrip:hover{border-color:rgba(0,180,255,.45)}
-  .eventstrip .es-meet{font-family:var(--display);font-size:19px;font-weight:500;color:var(--ink)}
-  .eventstrip .es-meet em{font-style:normal;color:var(--accent-text)}
-  .eventstrip .es-when{font-size:14.5px;color:var(--body)}
-  .eventstrip .es-pod{background:var(--wash);color:var(--accent-text);border:1px solid rgba(0,180,255,.3);
-    border-radius:999px;padding:4px 12px;font-size:12.5px;font-weight:600;letter-spacing:.04em}
-  .eventstrip .es-go{margin-left:auto;font-weight:600;font-size:14.5px;color:var(--accent-text)}
-  .eventstrip:hover .es-go{text-decoration:underline}
-  @media(max-width:700px){ .eventstrip .es-go{margin-left:0} }
 
   /* no decorative rules: lime line under the logo, blue line before Read more */
   .newsbanner .card .sub::before,.newscard .shot .card .sub::before{display:none}
@@ -499,3 +487,14 @@
   .hero h1{max-width:none}
   .subhead-hero{font-family:var(--display);font-weight:400;font-size:clamp(24px,3vw,34px);line-height:1.2;color:var(--ink);margin-top:18px}
   .subhead-hero span{color:var(--bright)}
+
+  /* hero proof points (variant C, 16 Oct) */
+  .hero h1{max-width:none;font-size:clamp(32px,4vw,52px)}
+  .proof{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:40px}
+  .proof div{background:rgba(255,255,255,.85);border:1px solid var(--line);border-radius:14px;padding:14px 16px;border-top:3px solid var(--bright)}
+  .proof b{display:block;font-family:var(--display);font-weight:500;font-size:16.5px;color:var(--ink)}
+  .proof span{font-size:13.5px;color:var(--body)}
+  @media(max-width:900px){.proof{grid-template-columns:1fr 1fr}}
+  @media(max-width:480px){.proof{grid-template-columns:1fr}}
+  .dhf-link{display:inline-block;margin-top:22px;font-size:14.5px;font-weight:600;color:var(--accent-text);text-decoration:none}
+  .dhf-link:hover{text-decoration:underline}
