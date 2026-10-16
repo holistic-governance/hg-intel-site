@@ -494,3 +494,8 @@
   .feat > li{flex:1 1 240px}
   .cards > *{flex:1 1 240px}
   .facts > .fact{flex:1 1 200px}
+
+  /* hero: product heading, then the promise as a subheading */
+  .hero h1{max-width:none}
+  .subhead-hero{font-family:var(--display);font-weight:400;font-size:clamp(24px,3vw,34px);line-height:1.2;color:var(--ink);margin-top:18px}
+  .subhead-hero span{color:var(--bright)}
