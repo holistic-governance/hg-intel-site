@@ -498,3 +498,16 @@
   @media(max-width:480px){.proof{grid-template-columns:1fr}}
   .dhf-link{display:inline-block;margin-top:22px;font-size:14.5px;font-weight:600;color:var(--accent-text);text-decoration:none}
   .dhf-link:hover{text-decoration:underline}
+
+  /* areas of practice: summary left, grouped soft chips right (E1, 16 Oct) */
+  .ap{display:grid;grid-template-columns:.75fr 1.25fr;gap:48px;align-items:start;margin-top:48px;padding-top:40px;border-top:1px solid var(--line)}
+  .ap-h{font-family:var(--display);font-weight:400;font-size:30px;color:var(--ink);line-height:1.15}
+  .ap-l p{font-size:15px;color:var(--body);margin-top:12px}
+  .ap-n{color:var(--ink)!important;margin-top:18px!important}
+  .ap-n b{font-family:var(--display);font-size:44px;font-weight:400;color:var(--bright);margin-right:6px}
+  .ap-grp{padding:12px 0;border-top:1px solid var(--line)}
+  .ap-grp:first-child{border-top:none;padding-top:0}
+  .ap-lab{font-family:var(--display);font-weight:500;font-size:16.5px;color:var(--ink);margin-bottom:9px}
+  .ap-cl{display:flex;flex-wrap:wrap;gap:8px}
+  .ap-cl span{font-size:14px;font-weight:500;color:#05609F;background:var(--wash);border:1px solid rgba(0,180,255,.25);border-radius:999px;padding:6px 13px}
+  @media(max-width:900px){.ap{grid-template-columns:1fr;gap:24px}}
