@@ -202,7 +202,7 @@
     background:var(--wash);border:1px solid var(--line);box-shadow:0 18px 44px -26px rgba(17,48,90,.5)}
   .portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block}
   .who h3{font-family:var(--display);font-weight:500;font-size:30px;color:var(--ink);line-height:1.15}
-  .who .role{font-size:14px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-text);margin-top:8px}
+  .who .role{font-size:16px;font-weight:600;color:var(--accent-text);margin-top:8px}
   .who p{font-size:16px;color:var(--body);margin-top:18px;line-height:1.65}
   .who .links{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
   @media(max-width:700px){.team{grid-template-columns:1fr}.portrait{width:100%;max-width:220px}}
@@ -210,7 +210,7 @@
   /* credential columns */
   .creds{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px 40px;margin-top:38px;
     padding-top:32px;border-top:1px solid var(--line)}
-  .creds h4{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--soft)}
+  .creds h4{font-family:var(--display);font-size:19px;font-weight:500;color:var(--ink)}
   .creds li{list-style:none;font-size:15px;color:var(--body);margin-top:11px;padding-left:18px;position:relative;line-height:1.5}
   .creds li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:2px;border-radius:2px;background:var(--bright)}
 
@@ -220,7 +220,7 @@
     gap:12px;background:none;border:none}
   .fact{background:var(--wash);border:1px solid var(--line);border-radius:14px;padding:18px 20px 20px;
     display:flex;flex-direction:column;gap:7px}
-  .fact dt{font-size:10.5px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--soft)}
+  .fact dt{font-size:13.5px;font-weight:600;color:var(--soft)}
   .fact dd{font-size:15.5px;font-weight:500;color:var(--ink);margin:0;line-height:1.45}
   .fact dd a{font-weight:500}
   #company .note{margin-top:22px;font-size:13.5px}
@@ -488,3 +488,9 @@
     .prose td:first-child{font-weight:600;color:var(--ink)}
     footer{padding-bottom:84px}
   }
+
+  /* card rows always fill the width: a short last row stretches instead of leaving a lone card */
+  .feat,.cards,.facts{display:flex;flex-wrap:wrap}
+  .feat > li{flex:1 1 240px}
+  .cards > *{flex:1 1 240px}
+  .facts > .fact{flex:1 1 200px}
