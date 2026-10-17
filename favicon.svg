@@ -1,15 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 804 1200" width="804" height="1200" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1600" width="1600" height="1600" fill="none">
+  <rect width="1600" height="1600" rx="260" fill="#00B4FF"/>
   <defs><clipPath id="g"><circle cx="580" cy="838" r="359"/></clipPath></defs>
-  <g fill="#00B4FF">
-    <rect x="0" y="0" width="97" height="733"/>
-    <rect x="490" y="0" width="97" height="733"/>
-    <rect x="557" y="823" width="245" height="72"/>
-    <rect x="720" y="823" width="82" height="377" clip-path="url(#g)"/>
-  </g>
-  <g stroke="#00B4FF">
-    <polyline stroke-width="18" stroke-linejoin="round" stroke-linecap="butt"
-      points="97,317 136,317 162,192 194,462 232,64 286,506 314,300 356,300 381,216 397,317 433,317 462,232 476,295 490,295"/>
-    <line x1="587" y1="317" x2="735" y2="317" stroke-width="18"/>
-    <path d="M776,553 A323 323 0 1 0 742,1118" stroke-width="72"/>
+  <g transform="translate(398 200)">
+    <g fill="#FFFFFF">
+      <rect x="0" y="0" width="97" height="733"/>
+      <rect x="490" y="0" width="97" height="733"/>
+      <rect x="557" y="823" width="245" height="72"/>
+      <rect x="720" y="823" width="82" height="377" clip-path="url(#g)"/>
+    </g>
+    <g stroke="#FFFFFF">
+      <polyline stroke-width="18" stroke-linejoin="round" stroke-linecap="butt"
+        points="97,317 136,317 162,192 194,462 232,64 286,506 314,300 356,300 381,216 397,317 433,317 462,232 476,295 490,295"/>
+      <line x1="587" y1="317" x2="735" y2="317" stroke-width="18"/>
+      <path d="M776,553 A323 323 0 1 0 742,1118" stroke-width="72"/>
+    </g>
   </g>
 </svg>
